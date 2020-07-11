@@ -3,10 +3,9 @@
 .home header {
     background-image: url(../assets/home-header.jpg);
     background-size: cover;
-    padding: 40px 0;
-        .wrapper {
-            position: relative;
-        }
+    height: 80vh;
+    padding: 40px 0 40px 110px;
+    position: relative;
 }
 
 .home nav ul {
@@ -23,19 +22,20 @@
         }
 }
 
-
 .home h1 {
     color: $colorTwo;
     float: left;
     position: absolute;
-    bottom: 0;
-    width: 35%;
+    bottom: 20px;
+    width: 55%;
 }
 
 .home .headerImageContainer {
     float: right;
-    position: relative;
-    right: -120px;
-    width: 65%;
+    position: absolute;
+    right: 0;
+    bottom: -150px;
+    width: 50%;
 }
+
 
