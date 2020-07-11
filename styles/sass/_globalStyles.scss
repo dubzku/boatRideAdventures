@@ -1,0 +1,63 @@
+/* ---------------SKIP LINK--------------- */
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+/* ---------------GLOBAL STYLES--------------- */
+
+html {
+    font-size: 125%; /*20px*/
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: $baseFont;
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+.linkButton {
+    font-family: $headingFont;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3.95rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+.linkButton {
+    @include buttonDecor();
+}
+
+.linkButton:hover {
+    @include buttonHover();
+}

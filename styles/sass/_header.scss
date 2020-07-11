@@ -1,0 +1,41 @@
+/* Home Page Header (index.html) */
+
+.home header {
+    background-image: url(../assets/home-header.jpg);
+    background-size: cover;
+    padding: 40px 0;
+        .wrapper {
+            position: relative;
+        }
+}
+
+.home nav ul {
+    display: flex;
+        li {
+            font-weight: 700;
+                a {
+                    color: $colorFour;
+                    padding: 0 30px;
+                    & span:hover {
+                        border-bottom: $colorTwo 3px solid;
+                    }
+                }
+        }
+}
+
+
+.home h1 {
+    color: $colorTwo;
+    float: left;
+    position: absolute;
+    bottom: 0;
+    width: 35%;
+}
+
+.home .headerImageContainer {
+    float: right;
+    position: relative;
+    right: -120px;
+    width: 65%;
+}
+

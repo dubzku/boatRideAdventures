@@ -1,0 +1,12 @@
+@mixin buttonDecor() {
+    background-color: $colorTwo;
+    color: $colorThree;
+    display: inline-block;
+    font-family: $headingFont;
+    padding: 12px 15px;
+    transition: all 0.4s;
+}
+
+@mixin buttonHover() {
+    transform: scale(1.05);
+}
