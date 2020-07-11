@@ -1,4 +1,4 @@
-/* Home Page Header (index.html) */
+/* *************************************HOME PAGE******************************************  */
 
 .home header {
     background-image: url(../assets/home-header.jpg);
@@ -38,4 +38,32 @@
     width: 50%;
 }
 
+/* *************************************BLOG PAGE******************************************  */
+
+.blog header {
+    background-image: url(../assets/blog-header.jpg);
+    background-size: cover;
+    background-position: 0% 50%;
+    height: 80vh;
+    padding: 40px 0 40px 0;
+}
+
+.blog nav ul {
+    display: flex;
+        li {
+            font-weight: 700;
+                a {
+                    color: $colorFour;
+                    padding: 0 30px;
+                    & span:hover {
+                        border-bottom: $colorTwo 3px solid;
+                    }
+                }
+        }
+}
+
+.blog h1 {
+    color: $colorFour;
+    margin-top: 80px;
+}
 

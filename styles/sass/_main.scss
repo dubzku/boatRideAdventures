@@ -1,4 +1,4 @@
-/* ****************HOME PAGE****************  */
+/* *************************************HOME PAGE******************************************  */
 
 /* Section - Site Info */
 .home {
@@ -82,6 +82,122 @@
 }
 
 /* Section - Extra Vacation Days */
+.home .extraVacationDays {
+    background: $colorOne;
+    padding: 100px 0;
+    .wrapper {
+        text-align: center;
+    }
+}
+
+.home .extraVacationDays h2,
+.home .extraVacationDays p,
+.home .extraVacationDays .linkButton {
+    margin: 20px 0;
+}
+
+.home .extraVacationDays h2 {
+    color: $colorThree;
+}
+
+/* Section - Full Bleed Paddle Boat Pic*/
+.home .fullBleedPaddlePic {
+    background: url(../assets/banner.jpg);
+    background-size: cover;
+    height: 60vh;
+}
+
+/* Section - Win Trip Section*/
+.home .winTrip {
+    background: $colorOne;
+    padding: 80px 0;
+    h2 {
+        color: $colorThree;
+    }
+}
+
+.home .winTrip img {
+    float: left;
+    width: calc(30% - 30px);
+    margin-right: 30px;
+    box-shadow: -20px 20px 0px $colorTwo;
+    
+}
+
+.home .winTripTextContainer {
+    float: left;
+    width: calc(70% - 30px);
+    margin-left: 30px;
+}
+
+/* Section - Gallery Section*/
+.home .gallery {
+    background-color: $colorThree;
+    padding: 80px 0;
+    ul {
+    display: flex;
+    li {
+        width: calc((100% / 3) - 30px);
+        margin: 0 15px;
+        }
+    }
+}
+    
+/* *************************************BLOG PAGE******************************************  */
+.blog main {
+    background-color: $colorOne;
+    padding: 100px 0 0 80px;
+}
+
+.blog .asideArticleFlex {
+    // display: flex;
+    border: lime dotted 1px;
+    // justify-content: space-between;
+}
+
+.blog aside {
+    border: red dashed 1px;
+    width: 25%;
+    float: left;
+    background-color: $colorThree;
+    color: $colorFour;
+    h4 {
+        color: $colorTwo;
+        margin-bottom: 10px;
+    }
+    img {
+            position: relative;
+            top: -30px;
+            left: -90px;
+            width: 100%;
+        }
+    }
+
+.blog article {
+    border: magenta 1px solid;
+    width: calc(60% - 50px);
+    margin-left: 50px;
+    float: right;
+}
+
+.blog .asideTextContainer,
+.blog .recentPosts {
+    margin: 15px 0;
+    padding: 0 20px;
+}
+
+.blog .recentPosts {
+    ul {
+        list-style-type: disc;
+        list-style-position: inside;
+        line-height: 1.4rem;
+        letter-spacing: 1px;
+    }
+}
+
+
+
+
 
 
 
