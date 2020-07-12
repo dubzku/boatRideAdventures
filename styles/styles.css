@@ -379,6 +379,51 @@ h4 {
   width: 50%;
 }
 
+/* HIDDEN HAMBURGER MENU STYLING - only applicable at 768px breakpoint */
+.home ul.hiddenMenu {
+  background: #0D457F;
+  position: fixed;
+  z-index: 10;
+  width: 50%;
+  left: -50%;
+  top: 0;
+  height: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.home ul.hiddenMenu a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 20px;
+  color: #FFFFFF;
+}
+
+.home ul.hiddenMenu a:hover,
+.home ul.hiddenMenu a:focus {
+  text-decoration: underline;
+}
+
+.home input[type="checkbox"]:checked + ul.hiddenMenu {
+  left: 0;
+}
+
+.home input[type="checkbox"],
+.home label {
+  display: none;
+}
+
+.home label[for="toggle"] {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #FDD908;
+  font-size: 2.1rem;
+  z-index: 10;
+}
+
 /* *************************************BLOG PAGE******************************************  */
 .blog header {
   background-image: url(../assets/blog-header.jpg);
@@ -862,4 +907,78 @@ footer {
 
 footer a {
   color: #2f60f5;
+}
+
+/* ***************HOME PAGE (INDEX.HTML) MEDIA QUERIES*********** */
+@media (max-width: 1250px) {
+  .home header {
+    padding-left: 50px;
+  }
+  .home h1 {
+    bottom: 100px;
+  }
+  .home .headerImageContainer {
+    top: 0;
+  }
+}
+
+@media (max-width: 940px) {
+  /* Portrait tablet and small desktops */
+  .home .headerImageContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Landscape phone to portrait tablet */
+  .home .mainMenu {
+    visibility: collapse;
+  }
+  .home .hamburger {
+    display: block;
+  }
+  .home h1 {
+    font-size: 2.8rem;
+    bottom: 190px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Landscape phones and down */
+  .home header {
+    height: 80vh;
+    background-position: center;
+  }
+  .home header {
+    padding-left: 25px;
+  }
+  .home h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ***************BLOG PAGE (BLOG.HTML) MEDIA QUERIES*********** */
+@media (max-width: 940px) {
+  /* Portrait tablet and small desktops */
+}
+
+@media (max-width: 768px) {
+  /* Landscape phone to portrait tablet */
+}
+
+@media (max-width: 480px) {
+  /* Landscape phones and down */
+}
+
+/* ***************CONTACT PAGE (CONTACT.HTML) MEDIA QUERIES*********** */
+@media (max-width: 940px) {
+  /* Portrait tablet and small desktops */
+}
+
+@media (max-width: 768px) {
+  /* Landscape phone to portrait tablet */
+}
+
+@media (max-width: 480px) {
+  /* Landscape phones and down */
 }
