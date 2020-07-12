@@ -367,7 +367,7 @@ h4 {
   color: #FDD908;
   float: left;
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   width: 55%;
 }
 
@@ -495,7 +495,7 @@ h4 {
 /* Section - Site Info */
 .home .siteInfo {
   background-color: #EAFEFC;
-  padding: 150px 0 70px 0;
+  padding: 150px 0;
 }
 
 .home .siteInfo h2 {
@@ -513,7 +513,9 @@ h4 {
 }
 
 .home .siteInfoP {
-  margin: 0 25px;
+  padding: 0 25px;
+  width: calc((100% / 2) - 40px);
+  margin: 0 20px;
 }
 
 .home .siteInfo i {
@@ -524,17 +526,18 @@ h4 {
   text-align: center;
   font-size: 1.5rem;
   position: absolute;
+  top: -10px;
   left: -75px;
 }
 
-/* Section - Site Info Cont */
-.home .siteInfoCont {
+/* Section - More Info */
+.home .moreInfo {
   background: #0D457F;
   color: #FFFFFF;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
-.home .siteInfoContFlexContainer {
+.home .moreInfoFlexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -543,31 +546,50 @@ h4 {
           justify-content: space-between;
 }
 
-.home .siteInfoContTextContainer {
-  width: 50%;
-  padding: 50px;
+.home .moreInfo .moreInfoImageContainer1,
+.home .moreInfo .moreInfoTextContainer1,
+.home .moreInfo .moreInfoTextContainer2,
+.home .moreInfo .moreInfoImageContainer2 {
+  width: 43%;
 }
 
-.home .siteInfoCont img {
-  width: 45%;
+.home .moreInfo .moreInfoTextContainer1 {
+  padding: 50px 100px 0 0;
 }
 
-.home .siteInfoCont .image1 {
-  -webkit-box-shadow: 20px 20px 0px #FDD908;
-          box-shadow: 20px 20px 0px #FDD908;
+.home .moreInfo .moreInfoTextContainer1 p {
+  margin: 15px 0 20px 0;
+}
+
+.home .moreInfo .moreInfoImageContainer1 {
   position: relative;
   top: -100px;
 }
 
-.home .siteInfoCont .image2 {
-  -webkit-box-shadow: -20px 20px 0px #FDD908;
-          box-shadow: -20px 20px 0px #FDD908;
-  position: relative;
-  bottom: -100px;
+.home .moreInfo .moreInfoImageContainer1 img {
+  -webkit-box-shadow: 20px 20px 0px #FDD908;
+          box-shadow: 20px 20px 0px #FDD908;
 }
 
-.home .newLocations {
+.home .moreInfo .moreInfoTextContainer2 {
   text-align: right;
+  padding: 50px 0 0 100px;
+}
+
+.home .moreInfo .moreInfoTextContainer2 p {
+  margin: 15px 0 20px 0;
+  text-align: left;
+}
+
+.home .moreInfo .moreInfoImageContainer2 {
+  position: relative;
+  bottom: -57px;
+}
+
+.home .moreInfo .moreInfoImageContainer2 img {
+  float: right;
+  -webkit-box-shadow: -20px 20px 0px #FDD908;
+          box-shadow: -20px 20px 0px #FDD908;
 }
 
 /* Section - Extra Vacation Days */
@@ -910,7 +932,7 @@ footer a {
 }
 
 /* ***************HOME PAGE (INDEX.HTML) MEDIA QUERIES*********** */
-@media (max-width: 1250px) {
+@media (max-width: 1300px) {
   .home header {
     padding-left: 50px;
   }
@@ -920,6 +942,9 @@ footer a {
   .home .headerImageContainer {
     top: 0;
   }
+  .home h2 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 940px) {
@@ -927,10 +952,29 @@ footer a {
   .home .headerImageContainer {
     display: none;
   }
+  .home .siteInfo {
+    padding: 60px 0;
+  }
+  .home .siteInfoContainer1,
+  .home .siteInfoContainer2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0;
+  }
+  .home .siteInfoP {
+    width: 100%;
+    margin: 40px;
+    padding: 0;
+  }
 }
 
 @media (max-width: 768px) {
   /* Landscape phone to portrait tablet */
+  .wrapper {
+    width: 90%;
+  }
   .home .mainMenu {
     visibility: collapse;
   }
@@ -940,6 +984,15 @@ footer a {
   .home h1 {
     font-size: 2.8rem;
     bottom: 190px;
+  }
+  .home h2 {
+    text-align: center;
+  }
+  .home .siteInfoP {
+    margin: 40px 0;
+  }
+  .home .siteInfo i {
+    display: none;
   }
 }
 
@@ -954,6 +1007,9 @@ footer a {
   }
   .home h1 {
     font-size: 2rem;
+  }
+  .home .siteInfoP {
+    margin: 40px 0;
   }
 }
 

@@ -1,6 +1,6 @@
 /* ***************HOME PAGE (INDEX.HTML) MEDIA QUERIES*********** */
 
-@media (max-width: 1250px) {
+@media (max-width: 1300px) {
     .home header {
         padding-left: 50px;
     }
@@ -10,16 +10,36 @@
     .home .headerImageContainer {
         top: 0;
     }
+    .home h2 {
+        font-size: 1.5rem;
+    }
+
 }
 
 @media (max-width: 940px) {  /* Portrait tablet and small desktops */
     .home .headerImageContainer {
         display: none;
     }
+    .home .siteInfo {
+        padding: 60px 0;
+    }
+    .home .siteInfoContainer1,
+    .home .siteInfoContainer2 {
+        flex-direction: column;
+        margin-top: 0;
+        }
+    .home .siteInfoP {
+        width: 100%;
+        margin: 40px;
+        padding: 0;
+    }
 }
 
 
 @media (max-width: 768px) {  /* Landscape phone to portrait tablet */
+    .wrapper {
+        width: 90%;
+    }
     .home .mainMenu {
         visibility: collapse;
     }
@@ -30,7 +50,15 @@
         font-size: 2.8rem;
         bottom: 190px;
     }
-
+    .home h2 {
+        text-align: center;
+    }
+    .home .siteInfoP {
+        margin: 40px 0;
+    }
+    .home .siteInfo i {
+        display: none;
+    }
 }
 
 
@@ -45,6 +73,9 @@
     .home h1 {
         font-size: 2rem;
     } 
+    .home .siteInfoP {
+        margin: 40px 0;
+    }
 }
 
 /* ***************BLOG PAGE (BLOG.HTML) MEDIA QUERIES*********** */
