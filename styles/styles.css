@@ -385,7 +385,7 @@ h4 {
   background-size: cover;
   background-position: 0% 50%;
   height: 80vh;
-  padding: 40px 0 40px 0;
+  padding: 40px 0 80px 0;
 }
 
 .blog nav ul {
@@ -565,12 +565,7 @@ h4 {
   padding: 100px 0 0 80px;
 }
 
-.blog .asideArticleFlex {
-  border: lime dotted 1px;
-}
-
 .blog aside {
-  border: red dashed 1px;
   width: 25%;
   float: left;
   background-color: #0D457F;
@@ -586,14 +581,6 @@ h4 {
   position: relative;
   top: -30px;
   left: -90px;
-  width: 100%;
-}
-
-.blog article {
-  border: magenta 1px solid;
-  width: calc(60% - 50px);
-  margin-left: 50px;
-  float: right;
 }
 
 .blog .asideTextContainer,
@@ -607,4 +594,32 @@ h4 {
   list-style-position: inside;
   line-height: 1.4rem;
   letter-spacing: 1px;
+}
+
+.blog article {
+  float: right;
+  width: 60%;
+  position: relative;
+  top: -150px;
+  border-bottom: 4px solid #FDD908;
+  border-left: 4px solid #FDD908;
+}
+
+.blog article .articleImageContainer {
+  position: relative;
+  margin: auto;
+  width: 95%;
+  z-index: 1;
+  top: -30px;
+  right: 0;
+}
+
+.blog article .articleImageContainer img {
+  position: relative;
+  -webkit-box-shadow: -25px 25px 0px #FDD908;
+          box-shadow: -25px 25px 0px #FDD908;
+}
+
+.blog input {
+  border: #FDD908;
 }

@@ -147,16 +147,16 @@
 .blog main {
     background-color: $colorOne;
     padding: 100px 0 0 80px;
+    // position: relative;
 }
 
-.blog .asideArticleFlex {
-    // display: flex;
-    border: lime dotted 1px;
-    // justify-content: space-between;
-}
+// .blog .asideArticleFlex {
+//     // display: flex;
+//     border: lime dotted 1px;
+//     // justify-content: space-between;
+// }
 
 .blog aside {
-    border: red dashed 1px;
     width: 25%;
     float: left;
     background-color: $colorThree;
@@ -169,16 +169,8 @@
             position: relative;
             top: -30px;
             left: -90px;
-            width: 100%;
         }
     }
-
-.blog article {
-    border: magenta 1px solid;
-    width: calc(60% - 50px);
-    margin-left: 50px;
-    float: right;
-}
 
 .blog .asideTextContainer,
 .blog .recentPosts {
@@ -194,6 +186,59 @@
         letter-spacing: 1px;
     }
 }
+
+.blog article {
+    float: right;
+    width: 60%;
+    position: relative;
+    top: -150px;
+    border-bottom: 4px solid $colorTwo;
+    border-left: 4px solid $colorTwo;
+}
+
+.blog article .articleImageContainer {
+    position: relative;
+    margin: auto;
+    width: 95%;
+    z-index: 1;
+    top: -30px;
+    right: 0;
+    img {
+        position: relative;
+        box-shadow: -25px 25px 0px $colorTwo;
+    }
+}
+
+// .blog article .nextDestination {
+    
+// }
+
+// .blog article {
+//     border-right: 0;
+//     width: calc(70% - 45px);
+//     margin-left: 45px;
+//     float: right;
+//     position: relative;
+//     top: -300px;
+//     .nextDestination {
+//         border: $colorTwo 4px solid;
+//     }
+//     img {
+//         box-shadow: -25px 25px 0px $colorTwo;
+//     }
+//     h2 {
+//         margin-top: 30px;
+//         color: $colorThree;
+//     }
+//     p {
+//         padding: 15px 0;
+//     }
+// }
+
+.blog input {
+    border: $colorTwo;
+}
+
 
 
 
