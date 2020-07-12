@@ -21,7 +21,7 @@
             <h1>Blog</h1>
         </div>
     </header>
-    <main>
+    <main class="clearfix">
         <!-- <div class="wrapper"> -->
             <div class="asideArticleFlex clearfix">
                 <aside>
@@ -64,7 +64,7 @@
                         <img src="./assets/comment-1.jpg" alt="photo of Ali, owner of the first comment">
                     </div>
                     <div class="comment1TextContainer">
-                        <p>Tuesday October 9th, 2019 by Ali</p>
+                        <p class="date">Tuesday October 9th, 2019 by Ali</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quod officiis dignissimos laboriosam est provident ab repellat, id omnis, ipsum illum eos aliquid assumenda, iste maxime ducimus voluptate qui vitae accusamus accusantium similique. In, quisquam cupiditate.</p>
                     </div>
                 </div>
@@ -73,28 +73,34 @@
                         <img src="./assets/comment-2.jpg" alt="photo of Lisa, owner of comment two">
                     </div>
                     <div class="comment2TextContainer">
+                        <p class="date">Wednesday, October 10th, 2019 by Lisa</p>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam iste corrupti possimus minima rem illo sint. Tempore, perspiciatis!</p>
                     </div>
                 </div>
+                <div class="commentForm">
+                    <form>
+                        <div class="flexForm">
+                            <div>
+                                <label class="sr-only" for="name">Name</label>
+                                <input type="text" id="name" placeholder="Name">
+                            </div>
+                            <div>
+                                <label class="sr-only" for="email">Email address</label>
+                                <input type="email" id="email" placeholder="Email address">
+                            </div>
+                        </div>
+                        <label class="sr-only" for="comments">Comments</label>
+                        <textarea name="" id="comments" cols="30" rows="10" placeholder="Comments"></textarea>
+
+                        <button type="submit">Post Comment</button>
+                    </form>
+                </div>
             </section>
-            <section class="commentForm">
-                <form action="">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Name">
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Email">
-
-                    <label for="comments">Comments</label>
-                    <textarea name="" id="comments" cols="30" rows="10"></textarea>
-
-                    <button type="submit">Post Comment</button>
-                </form>
-            </section>
+            
         <!-- </div> -->
     </main>
     <footer>
-        <p>Copyright Juno College</p>
+        <p>Created at <a href="https://junocollege.com/" target="_blank">Juno College</a></p>
     </footer>
 </body>
 </html>

@@ -67,3 +67,31 @@
     margin-top: 80px;
 }
 
+/* *************************************CONTACT PAGE******************************************  */
+
+.contact header {
+    background-image: url(../assets/contact-header.jpg);
+    background-size: cover;
+    background-position: 100% 50%;
+    height: 80vh;
+    padding: 40px 0 80px 0;
+    h1 {
+        color: $colorFour;
+        text-shadow: 2px 2px 3px black;
+        margin-top: 80px;
+    }
+}
+
+.contact nav ul {
+    display: flex;
+        li {
+            font-weight: 700;
+                a {
+                    color: $colorFour;
+                    padding: 0 30px;
+                    & span:hover {
+                        border-bottom: $colorTwo 3px solid;
+                    }
+                }
+        }
+}

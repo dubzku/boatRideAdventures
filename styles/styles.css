@@ -412,6 +412,40 @@ h4 {
   margin-top: 80px;
 }
 
+/* *************************************CONTACT PAGE******************************************  */
+.contact header {
+  background-image: url(../assets/contact-header.jpg);
+  background-size: cover;
+  background-position: 100% 50%;
+  height: 80vh;
+  padding: 40px 0 80px 0;
+}
+
+.contact header h1 {
+  color: #FFFFFF;
+  text-shadow: 2px 2px 3px black;
+  margin-top: 80px;
+}
+
+.contact nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact nav ul li {
+  font-weight: 700;
+}
+
+.contact nav ul li a {
+  color: #FFFFFF;
+  padding: 0 30px;
+}
+
+.contact nav ul li a span:hover {
+  border-bottom: #FDD908 3px solid;
+}
+
 /* *************************************HOME PAGE******************************************  */
 /* Section - Site Info */
 .home .siteInfo {
@@ -566,6 +600,7 @@ h4 {
 }
 
 .blog aside {
+  margin-top: 60px;
   width: 25%;
   float: left;
   background-color: #0D457F;
@@ -574,13 +609,15 @@ h4 {
 
 .blog aside h4 {
   color: #FDD908;
-  margin-bottom: 10px;
+  margin: 25px 0;
 }
 
 .blog aside img {
   position: relative;
   top: -30px;
   left: -90px;
+  -webkit-transform: scaleX(1.35) scaleY(1.25);
+          transform: scaleX(1.35) scaleY(1.25);
 }
 
 .blog .asideTextContainer,
@@ -608,18 +645,221 @@ h4 {
 .blog article .articleImageContainer {
   position: relative;
   margin: auto;
-  width: 95%;
-  z-index: 1;
-  top: -30px;
-  right: 0;
+  width: 97%;
+  top: -25px;
+  right: -11px;
 }
 
 .blog article .articleImageContainer img {
-  position: relative;
   -webkit-box-shadow: -25px 25px 0px #FDD908;
           box-shadow: -25px 25px 0px #FDD908;
 }
 
-.blog input {
-  border: #FDD908;
+.blog article .nextDestination {
+  padding: 40px 60px 80px 60px;
+}
+
+.blog article .nextDestination h2 {
+  color: #0D457F;
+}
+
+.blog article .nextDestination p {
+  padding: 15px 0;
+}
+
+.blog section.comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  float: right;
+  background-color: #EAFEFC;
+  padding-right: 50px;
+  position: relative;
+  top: -60px;
+}
+
+.blog section.comments h3 {
+  color: #0D457F;
+  padding-bottom: 20px;
+}
+
+.blog section.commentForm {
+  width: 60%;
+  float: right;
+}
+
+.blog .comment1,
+.blog .comment2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 40px 20px 0;
+}
+
+.blog .comment1ImageContainer,
+.blog .comment2ImageContainer {
+  width: 20%;
+}
+
+.blog .comment1TextContainer,
+.blog .comment2TextContainer {
+  width: 100%;
+}
+
+.blog p.date {
+  color: #0D457F;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.blog .commentForm .flexForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog section.comments input {
+  border: #EAFEFC 2.5px solid;
+  border-bottom: #FDD908 2.5px solid;
+  background: #EAFEFC;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  padding: 15px;
+}
+
+.blog section.comments textarea {
+  border: #FDD908 2.5px solid;
+  background: #EAFEFC;
+  width: 100%;
+  resize: none;
+  font-family: "Roboto", sans-serif;
+  margin: 30px 0;
+  padding: 20px;
+}
+
+.blog section.comments button {
+  background-color: #0D457F;
+  color: #FDD908;
+  border: #0D457F solid 1px;
+  width: 100%;
+  display: inline-block;
+  font-family: "IM Fell English", serif;
+  text-transform: uppercase;
+  padding: 12px 15px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.blog section.comments button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/* *************************************CONTACT PAGE******************************************  */
+.contact main {
+  background-color: #EAFEFC;
+}
+
+.contact main .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact main .wrapper .contactInfo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+  top: -40px;
+}
+
+.contact main .wrapper .contactInfo nav ul li a {
+  color: #0D457F;
+  padding: 0 10px;
+}
+
+.contact .contactInfo p:first-of-type {
+  margin: 15px 0;
+}
+
+.contact .contactForm .contactFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact .contactForm {
+  background: #0D457F;
+  width: 60%;
+  -webkit-box-shadow: 20px 20px 0px #FDD908;
+          box-shadow: 20px 20px 0px #FDD908;
+  padding: 50px;
+  position: relative;
+  top: -150px;
+}
+
+.contact .contactForm input {
+  border: #0D457F 2.5px solid;
+  border-bottom: #FDD908 2.5px solid;
+  background: #0D457F;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  padding: 15px;
+  color: #FFFFFF;
+}
+
+.contact .contactForm textarea {
+  border: #FDD908 2.5px solid;
+  background: #0D457F;
+  width: 100%;
+  resize: none;
+  font-family: "Roboto", sans-serif;
+  margin: 30px 0;
+  padding: 20px;
+  color: #FFFFFF;
+}
+
+.contact .contactForm button {
+  background-color: #FDD908;
+  color: #0D457F;
+  border: #FDD908 solid 1px;
+  width: 100%;
+  display: inline-block;
+  font-family: "IM Fell English", serif;
+  text-transform: uppercase;
+  padding: 12px 15px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.contact .contactForm button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+  padding: 10px;
+  background-color: #FDD908;
+  text-align: center;
+  color: #0D457F;
+}
+
+footer a {
+  color: #2f60f5;
 }

@@ -147,28 +147,23 @@
 .blog main {
     background-color: $colorOne;
     padding: 100px 0 0 80px;
-    // position: relative;
 }
 
-// .blog .asideArticleFlex {
-//     // display: flex;
-//     border: lime dotted 1px;
-//     // justify-content: space-between;
-// }
-
 .blog aside {
+    margin-top: 60px;
     width: 25%;
     float: left;
     background-color: $colorThree;
     color: $colorFour;
     h4 {
         color: $colorTwo;
-        margin-bottom: 10px;
+        margin: 25px 0;
     }
     img {
             position: relative;
             top: -30px;
             left: -90px;
+            transform: scaleX(1.35) scaleY(1.25);
         }
     }
 
@@ -194,50 +189,180 @@
     top: -150px;
     border-bottom: 4px solid $colorTwo;
     border-left: 4px solid $colorTwo;
-}
-
-.blog article .articleImageContainer {
-    position: relative;
-    margin: auto;
-    width: 95%;
-    z-index: 1;
-    top: -30px;
-    right: 0;
-    img {
+    .articleImageContainer {
         position: relative;
-        box-shadow: -25px 25px 0px $colorTwo;
+        margin: auto;
+        width: 97%;
+        // z-index: 1;
+        top: -25px;
+        right: -11px;
+        img {
+            // position: relative;
+            box-shadow: -25px 25px 0px $colorTwo;
+        }
+    }
+    .nextDestination {
+        padding: 40px 60px 80px 60px;
+        h2 {
+            color: $colorThree;
+        }
+        p {
+            padding: 15px 0;
+        }
     }
 }
 
-// .blog article .nextDestination {
-    
-// }
-
-// .blog article {
-//     border-right: 0;
-//     width: calc(70% - 45px);
-//     margin-left: 45px;
-//     float: right;
-//     position: relative;
-//     top: -300px;
-//     .nextDestination {
-//         border: $colorTwo 4px solid;
-//     }
-//     img {
-//         box-shadow: -25px 25px 0px $colorTwo;
-//     }
-//     h2 {
-//         margin-top: 30px;
-//         color: $colorThree;
-//     }
-//     p {
-//         padding: 15px 0;
-//     }
-// }
-
-.blog input {
-    border: $colorTwo;
+.blog section.comments {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    float: right;
+    background-color: $colorOne;
+    padding-right: 50px;
+    position: relative;
+    top: -60px;
+    h3 {
+        color: $colorThree;
+        padding-bottom: 20px;
+    }
 }
+
+.blog section.commentForm {
+    width: 60%;
+    float: right;
+}
+
+.blog .comment1,
+.blog .comment2 {
+    display: flex;
+    padding: 20px 40px 20px 0;
+}
+
+.blog .comment1ImageContainer,
+.blog .comment2ImageContainer {
+    width: 20%;
+}
+
+.blog .comment1TextContainer,
+.blog .comment2TextContainer {
+    width: 100%;
+}
+
+.blog p.date {
+    color: $colorThree;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.blog .commentForm .flexForm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog section.comments {
+    input {
+        border: $colorOne 2.5px solid;
+        border-bottom: $colorTwo 2.5px solid;
+        background: $colorOne;
+        width: 100%;
+        font-family: $baseFont;
+        padding: 15px;
+    }
+    textarea {
+        border: $colorTwo 2.5px solid;
+        background: $colorOne;
+        width: 100%;
+        resize: none;
+        font-family: $baseFont;
+        margin: 30px 0;
+        padding: 20px;
+    }
+    button {
+        background-color: $colorThree;
+        color: $colorTwo;
+        border: $colorThree solid 1px;
+        width: 100%;
+        display: inline-block;
+        font-family: $headingFont;
+        text-transform: uppercase;
+        padding: 12px 15px;
+        transition: all 0.4s;
+        &:hover {
+            @include buttonHover();
+        }
+    }
+}
+
+/* *************************************CONTACT PAGE******************************************  */
+.contact main {
+    background-color: $colorOne;
+    .wrapper {
+    display: flex;
+    justify-content: space-between;
+    .contactInfo {
+        align-self: center;
+        position: relative;
+        top: -40px;
+        nav ul li a {
+            color: $colorThree;
+            padding: 0 10px;
+        }
+    }
+    }
+}
+
+.contact .contactInfo p:first-of-type {
+    margin: 15px 0;
+}
+
+.contact .contactForm .contactFlex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .contactForm {
+    background: $colorThree;
+    width: 60%;
+    box-shadow: 20px 20px 0px $colorTwo;
+    padding: 50px;
+    position: relative;
+    top: -150px;
+    input {
+        border: $colorThree 2.5px solid;
+        border-bottom: $colorTwo 2.5px solid;
+        background: $colorThree;
+        width: 100%;
+        font-family: $baseFont;
+        padding: 15px;
+        color: $colorFour;
+    }
+    textarea {
+        border: $colorTwo 2.5px solid;
+        background: $colorThree;
+        width: 100%;
+        resize: none;
+        font-family: $baseFont;
+        margin: 30px 0;
+        padding: 20px;
+        color: $colorFour;
+    }
+    button {
+        background-color: $colorTwo;
+        color: $colorThree;
+        border: $colorTwo solid 1px;
+        width: 100%;
+        display: inline-block;
+        font-family: $headingFont;
+        text-transform: uppercase;
+        padding: 12px 15px;
+        transition: all 0.4s;
+        &:hover {
+            @include buttonHover();
+        }
+    }
+}
+
+
 
 
 
