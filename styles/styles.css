@@ -537,7 +537,8 @@ h4 {
   padding: 40px 0;
 }
 
-.home .moreInfoFlexContainer {
+.home .moreInfoFlexContainer1,
+.home .moreInfoFlexContainer2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -641,6 +642,10 @@ h4 {
   float: left;
   width: calc(70% - 30px);
   margin-left: 30px;
+}
+
+.home .winTripTextContainer p {
+  margin: 25px 0;
 }
 
 /* Section - Gallery Section*/
@@ -968,6 +973,49 @@ footer a {
     margin: 40px;
     padding: 0;
   }
+  .home .moreInfoFlexContainer1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home .moreInfoFlexContainer2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .home .moreInfo .moreInfoImageContainer1,
+  .home .moreInfo .moreInfoTextContainer1,
+  .home .moreInfo .moreInfoTextContainer2,
+  .home .moreInfo .moreInfoImageContainer2 {
+    width: 100%;
+  }
+  .home .moreInfo .moreInfoTextContainer1 {
+    padding: 0 20px 0 50px;
+    position: relative;
+    top: -20px;
+  }
+  .home .moreInfo .moreInfoTextContainer2 {
+    padding: 100px 50px 0 50px;
+  }
+  .home .moreInfo .moreInfoTextContainer2 p {
+    text-align: right;
+  }
+  .home .winTrip img {
+    float: none;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .home .winTripTextContainer {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .home .winTripTextContainer h2 {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -994,6 +1042,28 @@ footer a {
   .home .siteInfo i {
     display: none;
   }
+  .home .fullBleedPaddlePic {
+    background-position: center;
+  }
+  .home .winTrip img {
+    width: 70%;
+  }
+  .home .gallery ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .home .gallery ul li {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .home .gallery ul li img {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1010,6 +1080,13 @@ footer a {
   }
   .home .siteInfoP {
     margin: 40px 0;
+  }
+  .home .fullBleedPaddlePic {
+    background-position: 40%;
+  }
+  .home .winTrip img {
+    -webkit-box-shadow: -15px 15px 0px #FDD908;
+            box-shadow: -15px 15px 0px #FDD908;
   }
 }
 
