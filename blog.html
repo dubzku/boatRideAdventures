@@ -6,11 +6,12 @@
     <title>📝 Blog - Boat Ride Adventures with Winnie</title>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://kit.fontawesome.com/ab4a38dafe.js" crossorigin="anonymous"></script>
 </head>
 <body class="blog">
     <header>
         <div class="wrapper">
-            <nav>
+            <nav class="mainMenu">
                 <ul>
                     <li><a href=""><span>Home</span></a></li>
                     <li><a href=""><span>About</span></a></li>
@@ -18,21 +19,29 @@
                     <li><a href=""><span>Contact</span></a></li>
                 </ul>
             </nav>
+            <label for="toggle" class="hamburger"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" id="toggle" name="toggle">
+            <ul class="hiddenMenu">
+                <li><a href="#"><span>Home</span></a></li>
+                <li><a href="#"><span>About</span></a></li>
+                <li><a href="#"><span>Blog</span></a></li>
+                <li><a href="#"><span>Contact</span></a></li>
+            </ul>
             <h1>Blog</h1>
         </div>
     </header>
     <main class="clearfix">
         <!-- <div class="wrapper"> -->
-            <div class="asideArticleFlex clearfix">
+            <div class="asideArticleFlex">
                 <aside>
-                    <!-- <div class="asideImageContainer"> -->
+                    <div class="asideImageContainer">
                         <img src="./assets/blog-side-image.jpg" alt="deck of a very pirate-y looking ship">
-                    <!-- </div> -->
+                    </div>
                     <div class="asideTextContainer">
                         <h4>Our Mission</h4>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, exercitationem officiis voluptatum veritatis architecto qui.</p>
-                    </div>
-                    <div class="recentPosts">
+                    <!-- </div> -->
+                    <!-- <div class="recentPosts"> -->
                         <h4>Recent Posts</h4>
                         <ul>
                             <li>Lorem ipsum dolor sit.</li>
@@ -79,16 +88,16 @@
                 </div>
                 <div class="commentForm">
                     <form>
-                        <div class="flexForm">
-                            <div>
+                        <!-- <div class="flexForm"> -->
+                            <!-- <div> -->
                                 <label class="sr-only" for="name">Name</label>
                                 <input type="text" id="name" placeholder="Name">
-                            </div>
-                            <div>
+                            <!-- </div> -->
+                            <!-- <div> -->
                                 <label class="sr-only" for="email">Email address</label>
                                 <input type="email" id="email" placeholder="Email address">
-                            </div>
-                        </div>
+                            <!-- </div> -->
+                        <!-- </div> -->
                         <label class="sr-only" for="comments">Comments</label>
                         <textarea name="" id="comments" cols="30" rows="10" placeholder="Comments"></textarea>
 

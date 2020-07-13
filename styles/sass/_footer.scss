@@ -6,6 +6,10 @@ footer {
     color: $colorThree;
     a {
         color: rgb(47, 96, 245);
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 

@@ -130,6 +130,19 @@
     .home .siteInfoP {
         margin: 40px 0;
     }
+    .home .moreInfo .moreInfoTextContainer1,
+    .home .moreInfo .moreInfoTextContainer2 {
+        text-align: center;
+    }
+    .home .moreInfo .moreInfoTextContainer1 {
+        padding: 0 10px 0 10px;
+    }
+    .home .moreInfo .moreInfoTextContainer2 {
+        padding: 100px 10px 0 10px;
+        p {
+            text-align: center;
+        }
+    }
     .home .fullBleedPaddlePic {
         background-position: 40%;
     }
@@ -138,28 +151,5 @@
     }
 }
 
-/* ***************BLOG PAGE (BLOG.HTML) MEDIA QUERIES*********** */
-
-@media (max-width: 940px) { /* Portrait tablet and small desktops */
-}
 
 
-@media (max-width: 768px) { /* Landscape phone to portrait tablet */
-}
-
-
-@media (max-width: 480px) { /* Landscape phones and down */
-}
-
-/* ***************CONTACT PAGE (CONTACT.HTML) MEDIA QUERIES*********** */
-
-@media (max-width: 940px) { /* Portrait tablet and small desktops */
-}
-
-
-@media (max-width: 768px) { /* Landscape phone to portrait tablet */
-}
-
-
-@media (max-width: 480px) { /* Landscape phones and down */
-}

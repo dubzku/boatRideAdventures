@@ -1,0 +1,65 @@
+/* ***************BLOG PAGE (BLOG.HTML) MEDIA QUERIES*********** */
+
+@media (max-width: 940px) {/* Portrait tablet and small desktops */
+    .blog main {
+        padding: 50px 0 150px 40px;
+    }
+    .blog aside {
+        margin-top: 10px;
+        width: 100%;
+        float: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .asideTextContainer {
+            width: 80%;
+        }
+        .asideImageContainer {
+                top: 0px;
+                left: 0px;
+                width: 400px;
+                padding-left: 15px;
+            }
+        }
+    .blog article {
+        float: none;
+        width: 100%;
+        top: 60px;
+    }
+    .blog section.comments {
+        width: 100%;
+        padding-right: 50px;
+        position: relative;
+        top: 100px;
+        h3 {
+            padding-bottom: 5px;
+        }
+        p {
+            font-size: 0.8rem;
+        }
+        p.date {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+
+@media (max-width: 768px) { /* Landscape phone to portrait tablet */
+    
+    .blog .mainMenu {
+        visibility: collapse;
+    }
+    .blog .hamburger {
+        display: block;
+    }
+    .blog header {
+        background-position: 20%;
+    }
+    .blog h1 {
+        margin-top: 160px;
+    }
+}
+
+
+@media (max-width: 480px) { /* Landscape phones and down */
+}

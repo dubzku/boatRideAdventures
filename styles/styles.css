@@ -335,6 +335,52 @@ h4 {
           transform: scale(1.05);
 }
 
+/* GENERAL HEADER STYLES (shared across all three pages */
+/* Hidden Hamburger Menu - only applicable at 768px breakpoint*/
+ul.hiddenMenu {
+  background: #0D457F;
+  position: fixed;
+  z-index: 10;
+  width: 50%;
+  left: -50%;
+  top: 0;
+  height: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+ul.hiddenMenu a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 20px;
+  color: #FFFFFF;
+}
+
+ul.hiddenMenu a:hover,
+ul.hiddenMenu a:focus {
+  text-decoration: underline;
+}
+
+input[type="checkbox"]:checked + ul.hiddenMenu {
+  left: 0;
+}
+
+input[type="checkbox"],
+.hamburger {
+  display: none;
+}
+
+label[for="toggle"] {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #FDD908;
+  font-size: 2.1rem;
+  z-index: 10;
+}
+
 /* *************************************HOME PAGE******************************************  */
 .home header {
   background-image: url(../assets/home-header.jpg);
@@ -377,51 +423,6 @@ h4 {
   right: 0;
   bottom: -150px;
   width: 50%;
-}
-
-/* HIDDEN HAMBURGER MENU STYLING - only applicable at 768px breakpoint */
-.home ul.hiddenMenu {
-  background: #0D457F;
-  position: fixed;
-  z-index: 10;
-  width: 50%;
-  left: -50%;
-  top: 0;
-  height: 100%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.home ul.hiddenMenu a {
-  display: inline-block;
-  width: 100%;
-  text-decoration: none;
-  font-size: 1.5rem;
-  padding: 20px;
-  color: #FFFFFF;
-}
-
-.home ul.hiddenMenu a:hover,
-.home ul.hiddenMenu a:focus {
-  text-decoration: underline;
-}
-
-.home input[type="checkbox"]:checked + ul.hiddenMenu {
-  left: 0;
-}
-
-.home input[type="checkbox"],
-.home label {
-  display: none;
-}
-
-.home label[for="toggle"] {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  color: #FDD908;
-  font-size: 2.1rem;
-  z-index: 10;
 }
 
 /* *************************************BLOG PAGE******************************************  */
@@ -673,7 +674,7 @@ h4 {
 
 .blog aside {
   margin-top: 60px;
-  width: 25%;
+  width: 310px;
   float: left;
   background-color: #0D457F;
   color: #FFFFFF;
@@ -684,21 +685,18 @@ h4 {
   margin: 25px 0;
 }
 
-.blog aside img {
+.blog aside .asideImageContainer {
   position: relative;
   top: -30px;
   left: -90px;
-  -webkit-transform: scaleX(1.35) scaleY(1.25);
-          transform: scaleX(1.35) scaleY(1.25);
+  width: 375px;
 }
 
-.blog .asideTextContainer,
-.blog .recentPosts {
-  margin: 15px 0;
-  padding: 0 20px;
+.blog .asideTextContainer {
+  padding: 20px;
 }
 
-.blog .recentPosts ul {
+.blog .asideTextContainer ul {
   list-style-type: disc;
   list-style-position: inside;
   line-height: 1.4rem;
@@ -775,7 +773,7 @@ h4 {
 
 .blog .comment1ImageContainer,
 .blog .comment2ImageContainer {
-  width: 20%;
+  width: 150px;
 }
 
 .blog .comment1TextContainer,
@@ -802,9 +800,9 @@ h4 {
   border: #EAFEFC 2.5px solid;
   border-bottom: #FDD908 2.5px solid;
   background: #EAFEFC;
-  width: 100%;
+  width: calc((100% / 2) - 5px);
   font-family: "Roboto", sans-serif;
-  padding: 15px;
+  padding: 20px;
 }
 
 .blog section.comments textarea {
@@ -934,6 +932,11 @@ footer {
 
 footer a {
   color: #2f60f5;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: none;
 }
 
 /* ***************HOME PAGE (INDEX.HTML) MEDIA QUERIES*********** */
@@ -1081,6 +1084,19 @@ footer a {
   .home .siteInfoP {
     margin: 40px 0;
   }
+  .home .moreInfo .moreInfoTextContainer1,
+  .home .moreInfo .moreInfoTextContainer2 {
+    text-align: center;
+  }
+  .home .moreInfo .moreInfoTextContainer1 {
+    padding: 0 10px 0 10px;
+  }
+  .home .moreInfo .moreInfoTextContainer2 {
+    padding: 100px 10px 0 10px;
+  }
+  .home .moreInfo .moreInfoTextContainer2 p {
+    text-align: center;
+  }
   .home .fullBleedPaddlePic {
     background-position: 40%;
   }
@@ -1093,23 +1109,68 @@ footer a {
 /* ***************BLOG PAGE (BLOG.HTML) MEDIA QUERIES*********** */
 @media (max-width: 940px) {
   /* Portrait tablet and small desktops */
+  .blog main {
+    padding: 50px 0 150px 40px;
+  }
+  .blog aside {
+    margin-top: 10px;
+    width: 100%;
+    float: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blog aside .asideTextContainer {
+    width: 80%;
+  }
+  .blog aside .asideImageContainer {
+    top: 0px;
+    left: 0px;
+    width: 400px;
+    padding-left: 15px;
+  }
+  .blog article {
+    float: none;
+    width: 100%;
+    top: 60px;
+  }
+  .blog section.comments {
+    width: 100%;
+    padding-right: 50px;
+    position: relative;
+    top: 100px;
+  }
+  .blog section.comments h3 {
+    padding-bottom: 5px;
+  }
+  .blog section.comments p {
+    font-size: 0.8rem;
+  }
+  .blog section.comments p.date {
+    margin-bottom: 5px;
+  }
 }
 
 @media (max-width: 768px) {
   /* Landscape phone to portrait tablet */
-}
-
-@media (max-width: 480px) {
-  /* Landscape phones and down */
-}
-
-/* ***************CONTACT PAGE (CONTACT.HTML) MEDIA QUERIES*********** */
-@media (max-width: 940px) {
-  /* Portrait tablet and small desktops */
-}
-
-@media (max-width: 768px) {
-  /* Landscape phone to portrait tablet */
+  .blog .mainMenu {
+    visibility: collapse;
+  }
+  .blog .hamburger {
+    display: block;
+  }
+  .blog header {
+    background-position: 20%;
+  }
+  .blog h1 {
+    margin-top: 160px;
+  }
 }
 
 @media (max-width: 480px) {
