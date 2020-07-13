@@ -202,11 +202,12 @@
     .articleImageContainer {
         position: relative;
         margin: auto;
-        width: 97%;
+        // width: 100%;
         top: -25px;
-        right: -11px;
+        right: 0px;
+        padding-left: 19px;
         img {
-            box-shadow: -25px 25px 0px $colorTwo;
+            box-shadow: -23px 23px 0px $colorTwo;
         }
     }
     .nextDestination {
@@ -308,8 +309,11 @@
     display: flex;
     justify-content: space-between;
     .contactInfo {
+        display: flex;
+        flex-direction: column;
         align-self: center;
         position: relative;
+        width: 350px;
         top: -40px;
         nav ul li a {
             color: $colorThree;
@@ -323,14 +327,9 @@
     margin: 15px 0;
 }
 
-.contact .contactForm .contactFlex {
-    display: flex;
-    justify-content: space-between;
-}
-
 .contact .contactForm {
     background: $colorThree;
-    width: 60%;
+    width: 700px;
     box-shadow: 20px 20px 0px $colorTwo;
     padding: 50px;
     position: relative;
@@ -339,7 +338,7 @@
         border: $colorThree 2.5px solid;
         border-bottom: $colorTwo 2.5px solid;
         background: $colorThree;
-        width: 100%;
+        width: calc((100% / 2) - 5px);
         font-family: $baseFont;
         padding: 15px;
         color: $colorFour;

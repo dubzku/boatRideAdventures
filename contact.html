@@ -11,7 +11,7 @@
 <body class="contact">
     <header>
         <div class="wrapper">
-            <nav>
+            <nav class="mainMenu">
                 <ul>
                     <li><a href=""><span>Home</span></a></li>
                     <li><a href=""><span>About</span></a></li>
@@ -19,6 +19,14 @@
                     <li><a href=""><span>Contact</span></a></li>
                 </ul>
             </nav>
+            <label for="toggle" class="hamburger"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" id="toggle" name="toggle">
+            <ul class="hiddenMenu">
+                <li><a href="#"><span>Home</span></a></li>
+                <li><a href="#"><span>About</span></a></li>
+                <li><a href="#"><span>Blog</span></a></li>
+                <li><a href="#"><span>Contact</span></a></li>
+            </ul>
             <h1>Get in Touch</h1>
         </div>
     </header>
@@ -42,14 +50,14 @@
             <div class="contactForm">
                 <form>
                     <div class="contactFlex">
-                        <div>
+                        
                             <label class="sr-only" for="name">Name</label>
                             <input type="text" id="name" placeholder="Name">
-                        </div>
-                        <div>
+                        
+                        
                             <label class="sr-only" for="email">Email address</label>
                             <input type="email" id="email" placeholder="Email address">
-                        </div>
+                        
                     </div>
                     <label class="sr-only" for="message">Message</label>
                     <textarea name="" id="message" cols="30" rows="10" placeholder="Comments"></textarea>

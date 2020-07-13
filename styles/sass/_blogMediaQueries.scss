@@ -28,8 +28,8 @@
     }
     .blog section.comments {
         width: 100%;
-        padding-right: 50px;
-        position: relative;
+        padding-right: 0px;
+        margin-right: 20px;
         top: 100px;
         h3 {
             padding-bottom: 5px;
@@ -45,7 +45,11 @@
 
 
 @media (max-width: 768px) { /* Landscape phone to portrait tablet */
-    
+    .blog .mediaQueryWrapper {
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1200px;
+    }
     .blog .mainMenu {
         visibility: collapse;
     }
@@ -55,11 +59,118 @@
     .blog header {
         background-position: 20%;
     }
-    .blog h1 {
-        margin-top: 160px;
+    .blog main {
+        padding-left: 0;
+    }
+    .blog aside {
+        flex-direction: column;
+        .asideImageContainer {
+            display: none;
+        }
+    }
+    .blog article {
+        border-right: 4px solid $colorTwo;
+        .articleImageContainer {
+            top: 0;
+            img {
+                box-shadow: -25px -25px 0 $colorTwo;
+            }
+        }
+        .nextDestination {
+            padding: 40px 10px 40px 10px;
+            h2 {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+        }
+    }
+    .blog section.comments {
+        margin-right: 0;
+        h3 {
+            text-align: center;
+        }
+    }
+    .blog .comment1,
+    .blog .comment2 {
+        padding: 20px 0px 20px 0;
+    }
+    .blog section.comments {
+        input {
+            width: 100%;
+        }
+        textarea {
+            margin-top: 40px;
+        }
     }
 }
 
 
 @media (max-width: 480px) { /* Landscape phones and down */
+    .blog .asideTextContainer {
+        width: 100%;
+        padding: 20px 0;
+        h4 {
+            text-align: center;
+        }
+        p {
+            font-size: 0.8rem;
+            text-align: center;
+        }
+        ul li {
+            font-size: 0.8rem;
+        }
+    }
+    .blog article {
+        border: none;
+        .articleImageContainer {
+            img {
+                box-shadow: -15px -15px 0 $colorTwo;
+            }
+        }
+        .nextDestination {
+            padding: 0;
+            h2 {
+                font-size: 1.6rem;
+                padding-top: 20px;
+                text-align: center;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .blog .nextDestination p:first-of-type {
+        text-align: center;
+    }
+    .blog section.comments {
+        h3 {
+            font-size: 1.8rem;
+        }
+    }
+    .blog .comment1,
+    .blog .comment2 {
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 20px 0px 0px;
+    text-align: center;
+    .comment1ImageContainer,
+    .comment2ImageContainer {
+        img {
+            margin: 0 auto;
+        }
+    }
+    }
+    .blog section.comments {
+        input {
+            width: 100%;
+            padding: 10px;
+        }
+        textarea {
+            padding: 10px;
+        }
+    }
+    .blog .commentForm {
+        margin-top: 30px;
+    }
+
 }

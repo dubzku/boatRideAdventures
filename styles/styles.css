@@ -455,7 +455,7 @@ label[for="toggle"] {
 
 .blog h1 {
   color: #FFFFFF;
-  margin-top: 80px;
+  margin-top: 160px;
 }
 
 /* *************************************CONTACT PAGE******************************************  */
@@ -715,14 +715,14 @@ label[for="toggle"] {
 .blog article .articleImageContainer {
   position: relative;
   margin: auto;
-  width: 97%;
   top: -25px;
-  right: -11px;
+  right: 0px;
+  padding-left: 19px;
 }
 
 .blog article .articleImageContainer img {
-  -webkit-box-shadow: -25px 25px 0px #FDD908;
-          box-shadow: -25px 25px 0px #FDD908;
+  -webkit-box-shadow: -23px 23px 0px #FDD908;
+          box-shadow: -23px 23px 0px #FDD908;
 }
 
 .blog article .nextDestination {
@@ -848,10 +848,17 @@ label[for="toggle"] {
 }
 
 .contact main .wrapper .contactInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   position: relative;
+  width: 350px;
   top: -40px;
 }
 
@@ -864,18 +871,9 @@ label[for="toggle"] {
   margin: 15px 0;
 }
 
-.contact .contactForm .contactFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .contact .contactForm {
   background: #0D457F;
-  width: 60%;
+  width: 700px;
   -webkit-box-shadow: 20px 20px 0px #FDD908;
           box-shadow: 20px 20px 0px #FDD908;
   padding: 50px;
@@ -887,7 +885,7 @@ label[for="toggle"] {
   border: #0D457F 2.5px solid;
   border-bottom: #FDD908 2.5px solid;
   background: #0D457F;
-  width: 100%;
+  width: calc((100% / 2) - 5px);
   font-family: "Roboto", sans-serif;
   padding: 15px;
   color: #FFFFFF;
@@ -1142,8 +1140,8 @@ footer a:hover {
   }
   .blog section.comments {
     width: 100%;
-    padding-right: 50px;
-    position: relative;
+    padding-right: 0px;
+    margin-right: 20px;
     top: 100px;
   }
   .blog section.comments h3 {
@@ -1159,6 +1157,11 @@ footer a:hover {
 
 @media (max-width: 768px) {
   /* Landscape phone to portrait tablet */
+  .blog .mediaQueryWrapper {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+  }
   .blog .mainMenu {
     visibility: collapse;
   }
@@ -1168,11 +1171,156 @@ footer a:hover {
   .blog header {
     background-position: 20%;
   }
-  .blog h1 {
-    margin-top: 160px;
+  .blog main {
+    padding-left: 0;
+  }
+  .blog aside {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blog aside .asideImageContainer {
+    display: none;
+  }
+  .blog article {
+    border-right: 4px solid #FDD908;
+  }
+  .blog article .articleImageContainer {
+    top: 0;
+  }
+  .blog article .articleImageContainer img {
+    -webkit-box-shadow: -25px -25px 0 #FDD908;
+            box-shadow: -25px -25px 0 #FDD908;
+  }
+  .blog article .nextDestination {
+    padding: 40px 10px 40px 10px;
+  }
+  .blog article .nextDestination h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .blog section.comments {
+    margin-right: 0;
+  }
+  .blog section.comments h3 {
+    text-align: center;
+  }
+  .blog .comment1,
+  .blog .comment2 {
+    padding: 20px 0px 20px 0;
+  }
+  .blog section.comments input {
+    width: 100%;
+  }
+  .blog section.comments textarea {
+    margin-top: 40px;
   }
 }
 
 @media (max-width: 480px) {
   /* Landscape phones and down */
+  .blog .asideTextContainer {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .blog .asideTextContainer h4 {
+    text-align: center;
+  }
+  .blog .asideTextContainer p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .blog .asideTextContainer ul li {
+    font-size: 0.8rem;
+  }
+  .blog article {
+    border: none;
+  }
+  .blog article .articleImageContainer img {
+    -webkit-box-shadow: -15px -15px 0 #FDD908;
+            box-shadow: -15px -15px 0 #FDD908;
+  }
+  .blog article .nextDestination {
+    padding: 0;
+  }
+  .blog article .nextDestination h2 {
+    font-size: 1.6rem;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .blog article .nextDestination p {
+    font-size: 0.8rem;
+  }
+  .blog .nextDestination p:first-of-type {
+    text-align: center;
+  }
+  .blog section.comments h3 {
+    font-size: 1.8rem;
+  }
+  .blog .comment1,
+  .blog .comment2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 25px 20px 0px 0px;
+    text-align: center;
+  }
+  .blog .comment1 .comment1ImageContainer img,
+  .blog .comment1 .comment2ImageContainer img,
+  .blog .comment2 .comment1ImageContainer img,
+  .blog .comment2 .comment2ImageContainer img {
+    margin: 0 auto;
+  }
+  .blog section.comments input {
+    width: 100%;
+    padding: 10px;
+  }
+  .blog section.comments textarea {
+    padding: 10px;
+  }
+  .blog .commentForm {
+    margin-top: 30px;
+  }
 }
+
+/* ***************CONTACT PAGE (CONTACT.HTML) MEDIA QUERIES*********** */
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .contact main .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contact .contactForm {
+    width: 100%;
+    top: -100px;
+  }
+  .contact .contactInfo {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 600px;
+    text-align: center;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .contact .mainMenu {
+    visibility: collapse;
+  }
+  .contact .hamburger {
+    display: block;
+  }
+  .contact .contactForm input {
+    width: 100%;
+  }
+}
+
+/* Landscape phones and down */
