@@ -286,7 +286,9 @@ html {
   margin: 0 auto;
 }
 
-body {
+body,
+input,
+textarea {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
 }
@@ -300,7 +302,8 @@ h1,
 h2,
 h3,
 h4,
-.linkButton {
+.linkButton,
+button {
   font-family: "IM Fell English", serif;
   text-transform: uppercase;
 }
@@ -331,12 +334,17 @@ h4 {
   transition: all 0.4s;
 }
 
-.linkButton:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+.linkButton:hover,
+.linkButton:focus {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
 }
 
-/* ***********************Shared Header Styles (across all 3 pages)*********************** */
+textarea {
+  resize: none;
+}
+
+/* ***********************Shared <header> Styles (across all 3 pages)*********************** */
 /* Hidden 🍔 Menu - only applicable at 768px breakpoint */
 ul.hiddenMenu {
   background: #0D457F;
@@ -403,18 +411,19 @@ nav ul li a {
   padding: 0 30px;
 }
 
-nav ul li a span:hover {
+nav ul li a span:hover,
+nav ul li a span:focus {
   border-bottom: #FDD908 3px solid;
 }
 
-/* *************************** Home Page Header Styles ****************************** */
+/* *************************** Home Page <header> Styles ****************************** */
 .home header {
   background-image: url(../assets/home-header.jpg);
   padding: 40px 0 40px 110px;
   position: relative;
 }
 
-.home h1 {
+.home header h1 {
   color: #FDD908;
   float: left;
   position: absolute;
@@ -422,7 +431,7 @@ nav ul li a span:hover {
   width: 55%;
 }
 
-.home .headerImageContainer {
+.home header .headerImageContainer {
   float: right;
   position: absolute;
   right: 0;
@@ -430,19 +439,19 @@ nav ul li a span:hover {
   width: 50%;
 }
 
-/* *************************** Blog Page Header Styles ****************************** */
+/* *************************** Blog Page <header> Styles ****************************** */
 .blog header {
   background-image: url(../assets/blog-header.jpg);
   background-position: 0% 50%;
   padding: 40px 0 80px 0;
 }
 
-.blog h1 {
+.blog header h1 {
   color: #FFFFFF;
   margin-top: 160px;
 }
 
-/* *************************************CONTACT PAGE******************************************  */
+/* *************************** Contact Page <header> Styles ****************************** */
 .contact header {
   background-image: url(../assets/contact-header.jpg);
   background-position: 100% 50%;
@@ -455,21 +464,61 @@ nav ul li a span:hover {
   margin-top: 80px;
 }
 
-/* *************************************HOME PAGE******************************************  */
+/* *************************** Shared <main> Styles ****************************** */
+.home .siteInfo,
+.home .extraVacationDays,
+.home .winTrip,
+.blog main,
+.blog input,
+.blog textarea,
+.contact main {
+  background-color: #EAFEFC;
+}
+
+.home .siteInfoP i,
+.contact button {
+  background-color: #FDD908;
+}
+
+.home .about,
+.home .gallery,
+.blog aside,
+.blog button,
+.contact input,
+.contact textarea,
+.contact .contactForm {
+  background-color: #0D457F;
+}
+
+.home .galleryArrows,
+.blog aside h4,
+.blog button {
+  color: #FDD908;
+}
+
+.home h2,
+.blog h2,
+.blog h3,
+.blog p.date,
+.contact button,
+.contact .contactInfo nav ul li a {
+  color: #0D457F;
+}
+
+.home .about,
+.blog aside,
+.contact input,
+.contact textarea {
+  color: #FFFFFF;
+}
+
+/* *************************** Home Page <main> Styles ****************************** */
 /* Section - Site Info */
 .home .siteInfo {
-  background-color: #EAFEFC;
   padding: 150px 0;
 }
 
-.home .siteInfo h2 {
-  color: #0D457F;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.home .siteInfoContainer1,
-.home .siteInfoContainer2 {
+.home .siteInfo .siteInfoContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -478,12 +527,16 @@ nav ul li a span:hover {
 
 .home .siteInfoP {
   padding: 0 25px;
-  width: calc((100% / 2) - 40px);
   margin: 0 20px;
+  width: calc((100% / 2) - 40px);
 }
 
-.home .siteInfo i {
-  background-color: #FDD908;
+.home .siteInfoP h2 {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.home .siteInfoP h2 i {
   padding: 15px;
   border-radius: 50%;
   width: 65px;
@@ -494,15 +547,13 @@ nav ul li a span:hover {
   left: -75px;
 }
 
-/* Section - More Info */
-.home .moreInfo {
-  background: #0D457F;
-  color: #FFFFFF;
+/* Section - About */
+.home .about {
   padding: 40px 0;
 }
 
-.home .moreInfoFlexContainer1,
-.home .moreInfoFlexContainer2 {
+.home .about .aboutFlexContainer1,
+.home .about .aboutFlexContainer2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -511,47 +562,50 @@ nav ul li a span:hover {
           justify-content: space-between;
 }
 
-.home .moreInfo .moreInfoImageContainer1,
-.home .moreInfo .moreInfoTextContainer1,
-.home .moreInfo .moreInfoTextContainer2,
-.home .moreInfo .moreInfoImageContainer2 {
+.home .aboutTextContainer1,
+.home .aboutTextContainer2,
+.home .aboutImageContainer1,
+.home .aboutImageContainer2 {
   width: 43%;
 }
 
-.home .moreInfo .moreInfoTextContainer1 {
+.home .aboutTextContainer1 {
   padding: 50px 100px 0 0;
 }
 
-.home .moreInfo .moreInfoTextContainer1 p {
+.home .aboutTextContainer1 p {
   margin: 15px 0 20px 0;
 }
 
-.home .moreInfo .moreInfoImageContainer1 {
-  position: relative;
-  top: -100px;
-}
-
-.home .moreInfo .moreInfoImageContainer1 img {
-  -webkit-box-shadow: 20px 20px 0px #FDD908;
-          box-shadow: 20px 20px 0px #FDD908;
-}
-
-.home .moreInfo .moreInfoTextContainer2 {
+.home .aboutTextContainer2 {
   text-align: right;
   padding: 50px 0 0 100px;
 }
 
-.home .moreInfo .moreInfoTextContainer2 p {
+.home .aboutTextContainer2 p {
   margin: 15px 0 20px 0;
   text-align: left;
 }
 
-.home .moreInfo .moreInfoImageContainer2 {
+.home .aboutImageContainer1,
+.home .aboutImageContainer2 {
   position: relative;
+}
+
+.home .aboutImageContainer1 {
+  top: -100px;
+}
+
+.home .aboutImageContainer1 img {
+  -webkit-box-shadow: 20px 20px 0px #FDD908;
+          box-shadow: 20px 20px 0px #FDD908;
+}
+
+.home .aboutImageContainer2 {
   bottom: -57px;
 }
 
-.home .moreInfo .moreInfoImageContainer2 img {
+.home .aboutImageContainer2 img {
   float: right;
   -webkit-box-shadow: -20px 20px 0px #FDD908;
           box-shadow: -20px 20px 0px #FDD908;
@@ -559,7 +613,6 @@ nav ul li a span:hover {
 
 /* Section - Extra Vacation Days */
 .home .extraVacationDays {
-  background: #EAFEFC;
   padding: 100px 0;
 }
 
@@ -567,14 +620,10 @@ nav ul li a span:hover {
   text-align: center;
 }
 
-.home .extraVacationDays h2,
-.home .extraVacationDays p,
-.home .extraVacationDays .linkButton {
+.home .extraVacationDays .wrapper h2,
+.home .extraVacationDays .wrapper p,
+.home .extraVacationDays .wrapper .linkButton {
   margin: 20px 0;
-}
-
-.home .extraVacationDays h2 {
-  color: #0D457F;
 }
 
 /* Section - Full Bleed Paddle Boat Pic*/
@@ -586,18 +635,17 @@ nav ul li a span:hover {
 
 /* Section - Win Trip Section*/
 .home .winTrip {
-  background: #EAFEFC;
   padding: 80px 0;
 }
 
-.home .winTrip h2 {
-  color: #0D457F;
-}
-
-.home .winTrip img {
+.home .winTrip .winTripImageContainer {
   float: left;
   width: calc(30% - 30px);
   margin-right: 30px;
+}
+
+.home .winTrip .winTripImageContainer img {
+  margin: 0 auto;
   -webkit-box-shadow: -20px 20px 0px #FDD908;
           box-shadow: -20px 20px 0px #FDD908;
 }
@@ -614,7 +662,6 @@ nav ul li a span:hover {
 
 /* Section - Gallery Section*/
 .home .gallery {
-  background-color: #0D457F;
   padding: 80px 0;
 }
 
@@ -631,24 +678,29 @@ nav ul li a span:hover {
 
 .home .galleryArrows {
   display: none;
+  margin-top: 20px;
+  font-size: 4rem;
+  text-align: center;
 }
 
-/* *************************************BLOG PAGE******************************************  */
+.home .galleryArrows i {
+  margin: 0 30px;
+}
+
+/* *************************** Blog Page <main> Styles ****************************** */
 .blog main {
-  background-color: #EAFEFC;
   padding: 100px 0 0 80px;
 }
 
+/* Aside Styles */
 .blog aside {
   margin-top: 60px;
+  padding-bottom: 20px;
   width: 310px;
   float: left;
-  background-color: #0D457F;
-  color: #FFFFFF;
 }
 
 .blog aside h4 {
-  color: #FDD908;
   margin: 25px 0;
 }
 
@@ -659,17 +711,18 @@ nav ul li a span:hover {
   width: 375px;
 }
 
-.blog .asideTextContainer {
+.blog aside .asideTextContainer {
   padding: 20px;
 }
 
-.blog .asideTextContainer ul {
+.blog aside .asideTextContainer ul {
   list-style-type: disc;
   list-style-position: inside;
   line-height: 1.4rem;
   letter-spacing: 1px;
 }
 
+/* Article Styles */
 .blog article {
   float: right;
   width: 60%;
@@ -681,9 +734,7 @@ nav ul li a span:hover {
 
 .blog article .articleImageContainer {
   position: relative;
-  margin: auto;
   top: -25px;
-  right: 0px;
   padding-left: 19px;
 }
 
@@ -696,14 +747,11 @@ nav ul li a span:hover {
   padding: 40px 60px 80px 60px;
 }
 
-.blog article .nextDestination h2 {
-  color: #0D457F;
-}
-
 .blog article .nextDestination p {
   padding: 15px 0;
 }
 
+/* Comments Section Styles */
 .blog section.comments {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -714,20 +762,13 @@ nav ul li a span:hover {
           flex-direction: column;
   width: 60%;
   float: right;
-  background-color: #EAFEFC;
   padding-right: 50px;
   position: relative;
   top: -60px;
 }
 
 .blog section.comments h3 {
-  color: #0D457F;
   padding-bottom: 20px;
-}
-
-.blog section.commentForm {
-  width: 60%;
-  float: right;
 }
 
 .blog .comment1,
@@ -749,62 +790,39 @@ nav ul li a span:hover {
 }
 
 .blog p.date {
-  color: #0D457F;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
-.blog .commentForm .flexForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.blog section.comments input {
+/* Comments Form Styles */
+.blog .commentForm input {
   border: #EAFEFC 2.5px solid;
   border-bottom: #FDD908 2.5px solid;
-  background: #EAFEFC;
   width: calc((100% / 2) - 5px);
-  font-family: "Roboto", sans-serif;
   padding: 20px;
 }
 
-.blog section.comments textarea {
+.blog .commentForm textarea {
   border: #FDD908 2.5px solid;
-  background: #EAFEFC;
   width: 100%;
-  resize: none;
-  font-family: "Roboto", sans-serif;
   margin: 30px 0;
   padding: 20px;
 }
 
-.blog section.comments button {
-  background-color: #0D457F;
-  color: #FDD908;
+.blog .commentForm button {
   border: #0D457F solid 1px;
   width: 100%;
-  display: inline-block;
-  font-family: "IM Fell English", serif;
-  text-transform: uppercase;
   padding: 12px 15px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
-.blog section.comments button:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+.blog .commentForm button:hover, .blog .commentForm button:focus {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
 }
 
-/* *************************************CONTACT PAGE******************************************  */
-.contact main {
-  background-color: #EAFEFC;
-}
-
+/* *************************** Contact Page <main> Styles ****************************** */
 .contact main .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -815,7 +833,8 @@ nav ul li a span:hover {
 }
 
 .contact main .wrapper .contactInfo {
-  border: dashed firebrick 1px;
+  -ms-flex-item-align: center;
+      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -823,28 +842,30 @@ nav ul li a span:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-item-align: center;
-      align-self: center;
   position: relative;
-  width: calc(30% - 15px);
   top: -40px;
 }
 
 .contact main .wrapper .contactInfo nav ul li a {
-  color: #0D457F;
   padding: 0 10px;
+  font-size: 1.2rem;
 }
 
-.contact .contactInfo p:first-of-type {
+.contact main .wrapper .contactInfo nav ul li a i:hover,
+.contact main .wrapper .contactInfo nav ul li a i:focus {
+  -webkit-animation: pulse 1.25s infinite;
+          animation: pulse 1.25s infinite;
+}
+
+.contact main .wrapper .contactInfo p:first-of-type {
   margin: 15px 0;
 }
 
-.contact address {
+.contact main .wrapper .contactInfo address {
   font-style: normal;
 }
 
 .contact .contactForm {
-  background: #0D457F;
   width: 70%;
   -webkit-box-shadow: 20px 20px 0px #FDD908;
           box-shadow: 20px 20px 0px #FDD908;
@@ -856,43 +877,85 @@ nav ul li a span:hover {
 .contact .contactForm input {
   border: #0D457F 2.5px solid;
   border-bottom: #FDD908 2.5px solid;
-  background: #0D457F;
   width: calc((100% / 2) - 5px);
-  font-family: "Roboto", sans-serif;
   padding: 15px;
-  color: #FFFFFF;
 }
 
 .contact .contactForm textarea {
   border: #FDD908 2.5px solid;
-  background: #0D457F;
   width: 100%;
-  resize: none;
-  font-family: "Roboto", sans-serif;
   margin: 30px 0;
   padding: 20px;
-  color: #FFFFFF;
 }
 
 .contact .contactForm button {
-  background-color: #FDD908;
-  color: #0D457F;
   border: #FDD908 solid 1px;
   width: 100%;
-  display: inline-block;
-  font-family: "IM Fell English", serif;
-  text-transform: uppercase;
   padding: 12px 15px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
-.contact .contactForm button:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+.contact .contactForm button:hover, .contact .contactForm button:focus {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
 }
 
-/* Footer Styles */
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* Footer Styles for all 3 pages */
 footer {
   padding: 10px;
   background-color: #FDD908;
@@ -901,11 +964,11 @@ footer {
 }
 
 footer a {
-  color: #2f60f5;
+  color: #0D457F;
   text-decoration: underline;
 }
 
-footer a:hover {
+footer a:hover, footer a:focus {
   text-decoration: none;
 }
 
@@ -933,8 +996,7 @@ footer a:hover {
   .home .siteInfo {
     padding: 60px 0 150px 0;
   }
-  .home .siteInfoContainer1,
-  .home .siteInfoContainer2 {
+  .home .siteInfoContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -946,36 +1008,36 @@ footer a:hover {
     margin: 40px;
     padding: 0;
   }
-  .home .moreInfoFlexContainer1 {
+  .home .aboutFlexContainer1 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .home .moreInfoFlexContainer2 {
+  .home .aboutFlexContainer2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  .home .moreInfo .moreInfoImageContainer1,
-  .home .moreInfo .moreInfoTextContainer1,
-  .home .moreInfo .moreInfoTextContainer2,
-  .home .moreInfo .moreInfoImageContainer2 {
+  .home .aboutImageContainer1,
+  .home .aboutTextContainer1,
+  .home .aboutTextContainer2,
+  .home .aboutImageContainer2 {
     width: 100%;
   }
-  .home .moreInfo .moreInfoTextContainer1 {
+  .home .aboutTextContainer1 {
     padding: 0 20px 0 50px;
     position: relative;
     top: -20px;
   }
-  .home .moreInfo .moreInfoTextContainer2 {
+  .home .aboutTextContainer2 {
     padding: 100px 50px 0 50px;
   }
-  .home .moreInfo .moreInfoTextContainer2 p {
+  .home .aboutTextContainer2 p {
     text-align: right;
   }
-  .home .winTrip img {
+  .home .winTrip .winTripImageContainer {
     float: none;
     width: 50%;
     margin: 0 auto;
@@ -1021,7 +1083,7 @@ footer a:hover {
   .home .fullBleedPaddlePic {
     background-position: center;
   }
-  .home .winTrip img {
+  .home .winTrip .winTripImageContainer {
     width: 70%;
   }
   .home .gallery ul {
@@ -1046,13 +1108,6 @@ footer a:hover {
   }
   .home .galleryArrows {
     display: block;
-    margin-top: 20px;
-    font-size: 4rem;
-    color: #FDD908;
-    text-align: center;
-  }
-  .home .galleryArrows i {
-    margin: 0 30px;
   }
 }
 
@@ -1075,25 +1130,21 @@ footer a:hover {
     margin: 20px 0;
     text-align: center;
   }
-  .home .moreInfo .moreInfoTextContainer1,
-  .home .moreInfo .moreInfoTextContainer2 {
+  .home .aboutTextContainer1,
+  .home .aboutTextContainer2 {
     text-align: center;
   }
-  .home .moreInfo .moreInfoTextContainer1 {
+  .home .aboutTextContainer1 {
     padding: 0 10px 0 10px;
   }
-  .home .moreInfo .moreInfoTextContainer2 {
+  .home .aboutTextContainer2 {
     padding: 100px 10px 0 10px;
   }
-  .home .moreInfo .moreInfoTextContainer2 p {
+  .home .aboutTextContainer2 p {
     text-align: center;
   }
   .home .fullBleedPaddlePic {
     background-position: 40%;
-  }
-  .home .winTrip img {
-    -webkit-box-shadow: -15px 15px 0px #FDD908;
-            box-shadow: -15px 15px 0px #FDD908;
   }
 }
 

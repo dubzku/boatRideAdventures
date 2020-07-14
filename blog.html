@@ -30,43 +30,38 @@
             <h1>Blog</h1>
         </div>
     </header>
-    <main class="clearfix">
-        <div class="mediaQueryWrapper">
-            <div class="asideArticleFlex">
-                <aside>
-                    <div class="asideImageContainer">
-                        <img src="./assets/blog-side-image.jpg" alt="deck of a very pirate-y looking ship">
-                    </div>
-                    <div class="asideTextContainer">
-                        <h4>Our Mission</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, exercitationem officiis voluptatum veritatis architecto qui.</p>
-                    <!-- </div> -->
-                    <!-- <div class="recentPosts"> -->
-                        <h4>Recent Posts</h4>
-                        <ul>
-                            <li>Lorem ipsum dolor sit.</li>
-                            <li>Ab suscipit impedit incidunt!</li>
-                            <li>Mollitia ipsam assumenda fugit!</li>
-                            <li>Ea corrupti similique eligendi.</li>
-                        </ul>
-                    </div>
-                </aside>
-                <article>
-                    <div class="articleImageContainer">
-                        <img src="./assets/blog-post-image.jpg" alt="a boat anchored in the sea looking very sunny and inviting">
-                    </div>
-                    <div class="nextDestination">
-                        <h2>Next Destination</h2>
-                        <p>Monday, October 30, 2019 by Sulaire</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sunt, dolores fugiat facere dolore enim voluptatem, voluptatibus voluptas laudantium soluta deleniti? Iste voluptatem quae cupiditate fuga veritatis excepturi assumenda explicabo id quos quibusdam.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus unde assumenda ad id voluptate accusantium consectetur modi, praesentium sunt quaerat iste corrupti natus voluptatum perspiciatis, neque nihil molestiae quos doloribus quis aut dolorum. Obcaecati iusto voluptates odio quidem quae deserunt doloremque dicta harum repudiandae dolores.</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et voluptatem modi neque adipisci iste hic inventore nemo fugiat maiores officia aliquam est at aliquid, quibusdam odio eum optio voluptatibus deserunt necessitatibus tempore debitis asperiores magnam, quam porro! Beatae rem sit non illum voluptatibus deleniti reiciendis veniam. Repellendus nobis saepe inventore cum, architecto facilis alias, nihil exercitationem aut cupiditate minima quis corrupti suscipit commodi et, nemo deserunt dolorem ipsum vitae ex.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, quod repudiandae! Enim animi, fuga hic quasi dolor ab voluptas adipisci at pariatur atque?</p>
-                    </div>
-                </article>
-            </div>
-            
-            <section class="comments">
+    <main>
+        <div class="mediaQueryWrapper clearfix">
+            <aside>
+                <div class="asideImageContainer">
+                    <img src="./assets/blog-side-image.jpg" alt="deck of a very pirate-y looking ship">
+                </div>
+                <div class="asideTextContainer">
+                    <h4>Our Mission</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, exercitationem officiis voluptatum veritatis architecto qui.</p>
+                    <h4>Recent Posts</h4>
+                    <ul>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Ab suscipit impedit incidunt!</li>
+                        <li>Mollitia ipsam assumenda fugit!</li>
+                        <li>Ea corrupti similique eligendi.</li>
+                    </ul>
+                </div>
+            </aside>
+            <article>
+                <div class="articleImageContainer">
+                    <img src="./assets/blog-post-image.jpg" alt="a boat anchored in the sea looking very sunny and inviting">
+                </div>
+                <div class="nextDestination">
+                    <h2>Next Destination</h2>
+                    <p>Monday, October 30, 2019 by Sulaire</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sunt, dolores fugiat facere dolore enim voluptatem, voluptatibus voluptas laudantium soluta deleniti? Iste voluptatem quae cupiditate fuga veritatis excepturi assumenda explicabo id quos quibusdam.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus unde assumenda ad id voluptate accusantium consectetur modi, praesentium sunt quaerat iste corrupti natus voluptatum perspiciatis, neque nihil molestiae quos doloribus quis aut dolorum. Obcaecati iusto voluptates odio quidem quae deserunt doloremque dicta harum repudiandae dolores.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et voluptatem modi neque adipisci iste hic inventore nemo fugiat maiores officia aliquam est at aliquid, quibusdam odio eum optio voluptatibus deserunt necessitatibus tempore debitis asperiores magnam, quam porro! Beatae rem sit non illum voluptatibus deleniti reiciendis veniam. Repellendus nobis saepe inventore cum, architecto facilis alias, nihil exercitationem aut cupiditate minima quis corrupti suscipit commodi et, nemo deserunt dolorem ipsum vitae ex.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, quod repudiandae! Enim animi, fuga hic quasi dolor ab voluptas adipisci at pariatur atque?</p>
+                </div>
+            </article>
+            <section class="comments clearfix">
                 <h3>Comments</h3>
                 <div class="comment1">
                     <div class="comment1ImageContainer">
@@ -88,24 +83,16 @@
                 </div>
                 <div class="commentForm">
                     <form>
-                        <!-- <div class="flexForm"> -->
-                            <!-- <div> -->
-                                <label class="sr-only" for="name">Name</label>
-                                <input type="text" id="name" placeholder="Name">
-                            <!-- </div> -->
-                            <!-- <div> -->
-                                <label class="sr-only" for="email">Email address</label>
-                                <input type="email" id="email" placeholder="Email address">
-                            <!-- </div> -->
-                        <!-- </div> -->
+                        <label class="sr-only" for="name">Name</label>
+                        <input type="text" id="name" placeholder="Name">
+                        <label class="sr-only" for="email">Email address</label>
+                        <input type="email" id="email" placeholder="Email address">
                         <label class="sr-only" for="comments">Comments</label>
                         <textarea name="" id="comments" cols="30" rows="10" placeholder="Comments"></textarea>
-
                         <button type="submit">Post Comment</button>
                     </form>
                 </div>
             </section>
-            
         </div>
     </main>
     <footer>

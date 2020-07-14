@@ -1,13 +1,15 @@
-/* Footer Styles */
+/* Footer Styles for all 3 pages */
+
 footer {
     padding: 10px;
     background-color: $colorTwo;
     text-align: center;
     color: $colorThree;
     a {
-        color: rgb(47, 96, 245);
+        color: $colorThree;
         text-decoration: underline;
-        &:hover {
+        &:hover,
+        &:focus {
             text-decoration: none;
         }
     }
