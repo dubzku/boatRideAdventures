@@ -45,6 +45,9 @@
 
 
 @media (max-width: 768px) { /* Landscape phone to portrait tablet */
+    .blog h1 {
+        font-size: 2.8rem;
+    }
     .blog .mediaQueryWrapper {
         margin: 0 auto;
         width: 90%;
@@ -106,6 +109,9 @@
 
 
 @media (max-width: 480px) { /* Landscape phones and down */
+    .blog h1 {
+        font-size: 2rem;
+    }
     .blog .asideTextContainer {
         width: 100%;
         padding: 20px 0;

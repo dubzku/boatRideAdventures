@@ -154,6 +154,10 @@
         }
     }
 }
+
+.home .galleryArrows {
+    display: none;
+}
     
 /* *************************************BLOG PAGE******************************************  */
 .blog main {
@@ -309,11 +313,13 @@
     display: flex;
     justify-content: space-between;
     .contactInfo {
+        border: dashed firebrick 1px;
         display: flex;
         flex-direction: column;
         align-self: center;
         position: relative;
-        width: 350px;
+        // width: 350px;
+        width: calc(30% - 15px);
         top: -40px;
         nav ul li a {
             color: $colorThree;
@@ -327,9 +333,14 @@
     margin: 15px 0;
 }
 
+.contact address {
+    font-style: normal;
+}
+
 .contact .contactForm {
     background: $colorThree;
-    width: 700px;
+    width: 70%;
+    // width: 700px;
     box-shadow: 20px 20px 0px $colorTwo;
     padding: 50px;
     position: relative;

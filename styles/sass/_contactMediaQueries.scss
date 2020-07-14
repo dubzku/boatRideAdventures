@@ -5,19 +5,23 @@
     .contact main .wrapper {
         flex-direction: column-reverse;
     }
-    .contact .contactForm {
+    .contact main .contactInfo {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .contact main .contactForm {
         width: 100%;
         top: -100px;
     }
-    .contact .contactInfo {
-        align-items: center;
-        width: 600px;
-        text-align: center;
-    }
+    
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+    .contact h1 {
+        font-size: 2.8rem;
+    }
     .contact .mainMenu {
         visibility: collapse;
     }
@@ -27,8 +31,17 @@
     .contact .contactForm input {
         width: 100%;
     }
+    .contact .contactForm {
+        box-shadow: 10px 10px 0 $colorTwo;
+        padding: 20px;
+    }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+    .contact h1 {
+        font-size: 2rem;
+        position: relative;
+        top: -30px;
+    }
 }

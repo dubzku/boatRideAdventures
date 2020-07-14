@@ -21,7 +21,7 @@
         display: none;
     }
     .home .siteInfo {
-        padding: 60px 0;
+        padding: 60px 0 150px 0;
     }
     .home .siteInfoContainer1,
     .home .siteInfoContainer2 {
@@ -96,6 +96,9 @@
     .home .siteInfo i {
         display: none;
     }
+    .home .fancyUnderline {
+        border-bottom: $colorTwo 3px solid;
+    }
     .home .fullBleedPaddlePic {
         background-position: center;
     }
@@ -113,6 +116,20 @@
             }
         }
     }
+    .home .gallery ul li:nth-child(2),
+    .home .gallery ul li:nth-child(3) {
+        display: none;
+    }
+    .home .galleryArrows {
+        display: block;
+        margin-top: 20px;
+        font-size: 4rem;
+        color: $colorTwo;
+        text-align: center;
+        i {
+            margin: 0 30px;
+        }
+    }
 }
 
 
@@ -127,8 +144,12 @@
     .home h1 {
         font-size: 2rem;
     } 
+    .home h2 {
+        font-size: 1.25rem;
+    }
     .home .siteInfoP {
-        margin: 40px 0;
+        margin: 20px 0;
+        text-align: center;
     }
     .home .moreInfo .moreInfoTextContainer1,
     .home .moreInfo .moreInfoTextContainer2 {

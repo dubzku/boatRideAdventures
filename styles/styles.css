@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -335,8 +336,8 @@ h4 {
           transform: scale(1.05);
 }
 
-/* GENERAL HEADER STYLES (shared across all three pages */
-/* Hidden Hamburger Menu - only applicable at 768px breakpoint*/
+/* ***********************Shared Header Styles (across all 3 pages)*********************** */
+/* Hidden 🍔 Menu - only applicable at 768px breakpoint */
 ul.hiddenMenu {
   background: #0D457F;
   position: fixed;
@@ -352,15 +353,14 @@ ul.hiddenMenu {
 ul.hiddenMenu a {
   display: inline-block;
   width: 100%;
-  text-decoration: none;
   font-size: 1.5rem;
   padding: 20px;
   color: #FFFFFF;
 }
 
-ul.hiddenMenu a:hover,
-ul.hiddenMenu a:focus {
-  text-decoration: underline;
+ul.hiddenMenu a:hover, ul.hiddenMenu a:focus {
+  color: #0D457F;
+  background-color: #FDD908;
 }
 
 input[type="checkbox"]:checked + ul.hiddenMenu {
@@ -372,7 +372,7 @@ input[type="checkbox"],
   display: none;
 }
 
-label[for="toggle"] {
+.hamburger {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -381,32 +381,37 @@ label[for="toggle"] {
   z-index: 10;
 }
 
-/* *************************************HOME PAGE******************************************  */
-.home header {
-  background-image: url(../assets/home-header.jpg);
+/* Shared <header> Styles */
+header {
   background-size: cover;
   height: 80vh;
-  padding: 40px 0 40px 110px;
-  position: relative;
 }
 
-.home nav ul {
+/* Shared <nav> Styles */
+nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.home nav ul li {
+nav ul li {
   font-weight: 700;
 }
 
-.home nav ul li a {
+nav ul li a {
   color: #FFFFFF;
   padding: 0 30px;
 }
 
-.home nav ul li a span:hover {
+nav ul li a span:hover {
   border-bottom: #FDD908 3px solid;
+}
+
+/* *************************** Home Page Header Styles ****************************** */
+.home header {
+  background-image: url(../assets/home-header.jpg);
+  padding: 40px 0 40px 110px;
+  position: relative;
 }
 
 .home h1 {
@@ -425,32 +430,11 @@ label[for="toggle"] {
   width: 50%;
 }
 
-/* *************************************BLOG PAGE******************************************  */
+/* *************************** Blog Page Header Styles ****************************** */
 .blog header {
   background-image: url(../assets/blog-header.jpg);
-  background-size: cover;
   background-position: 0% 50%;
-  height: 80vh;
   padding: 40px 0 80px 0;
-}
-
-.blog nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.blog nav ul li {
-  font-weight: 700;
-}
-
-.blog nav ul li a {
-  color: #FFFFFF;
-  padding: 0 30px;
-}
-
-.blog nav ul li a span:hover {
-  border-bottom: #FDD908 3px solid;
 }
 
 .blog h1 {
@@ -461,9 +445,7 @@ label[for="toggle"] {
 /* *************************************CONTACT PAGE******************************************  */
 .contact header {
   background-image: url(../assets/contact-header.jpg);
-  background-size: cover;
   background-position: 100% 50%;
-  height: 80vh;
   padding: 40px 0 80px 0;
 }
 
@@ -471,25 +453,6 @@ label[for="toggle"] {
   color: #FFFFFF;
   text-shadow: 2px 2px 3px black;
   margin-top: 80px;
-}
-
-.contact nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.contact nav ul li {
-  font-weight: 700;
-}
-
-.contact nav ul li a {
-  color: #FFFFFF;
-  padding: 0 30px;
-}
-
-.contact nav ul li a span:hover {
-  border-bottom: #FDD908 3px solid;
 }
 
 /* *************************************HOME PAGE******************************************  */
@@ -664,6 +627,10 @@ label[for="toggle"] {
 .home .gallery ul li {
   width: calc((100% / 3) - 30px);
   margin: 0 15px;
+}
+
+.home .galleryArrows {
+  display: none;
 }
 
 /* *************************************BLOG PAGE******************************************  */
@@ -848,6 +815,7 @@ label[for="toggle"] {
 }
 
 .contact main .wrapper .contactInfo {
+  border: dashed firebrick 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -858,7 +826,7 @@ label[for="toggle"] {
   -ms-flex-item-align: center;
       align-self: center;
   position: relative;
-  width: 350px;
+  width: calc(30% - 15px);
   top: -40px;
 }
 
@@ -871,9 +839,13 @@ label[for="toggle"] {
   margin: 15px 0;
 }
 
+.contact address {
+  font-style: normal;
+}
+
 .contact .contactForm {
   background: #0D457F;
-  width: 700px;
+  width: 70%;
   -webkit-box-shadow: 20px 20px 0px #FDD908;
           box-shadow: 20px 20px 0px #FDD908;
   padding: 50px;
@@ -959,7 +931,7 @@ footer a:hover {
     display: none;
   }
   .home .siteInfo {
-    padding: 60px 0;
+    padding: 60px 0 150px 0;
   }
   .home .siteInfoContainer1,
   .home .siteInfoContainer2 {
@@ -1043,6 +1015,9 @@ footer a:hover {
   .home .siteInfo i {
     display: none;
   }
+  .home .fancyUnderline {
+    border-bottom: #FDD908 3px solid;
+  }
   .home .fullBleedPaddlePic {
     background-position: center;
   }
@@ -1065,6 +1040,20 @@ footer a:hover {
   .home .gallery ul li img {
     margin: 0 auto;
   }
+  .home .gallery ul li:nth-child(2),
+  .home .gallery ul li:nth-child(3) {
+    display: none;
+  }
+  .home .galleryArrows {
+    display: block;
+    margin-top: 20px;
+    font-size: 4rem;
+    color: #FDD908;
+    text-align: center;
+  }
+  .home .galleryArrows i {
+    margin: 0 30px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1079,8 +1068,12 @@ footer a:hover {
   .home h1 {
     font-size: 2rem;
   }
+  .home h2 {
+    font-size: 1.25rem;
+  }
   .home .siteInfoP {
-    margin: 40px 0;
+    margin: 20px 0;
+    text-align: center;
   }
   .home .moreInfo .moreInfoTextContainer1,
   .home .moreInfo .moreInfoTextContainer2 {
@@ -1157,6 +1150,9 @@ footer a:hover {
 
 @media (max-width: 768px) {
   /* Landscape phone to portrait tablet */
+  .blog h1 {
+    font-size: 2.8rem;
+  }
   .blog .mediaQueryWrapper {
     margin: 0 auto;
     width: 90%;
@@ -1220,6 +1216,9 @@ footer a:hover {
 
 @media (max-width: 480px) {
   /* Landscape phones and down */
+  .blog h1 {
+    font-size: 2rem;
+  }
   .blog .asideTextContainer {
     width: 100%;
     padding: 20px 0;
@@ -1297,21 +1296,24 @@ footer a:hover {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  .contact .contactForm {
-    width: 100%;
-    top: -100px;
-  }
-  .contact .contactInfo {
+  .contact main .contactInfo {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 600px;
     text-align: center;
+    width: 100%;
+  }
+  .contact main .contactForm {
+    width: 100%;
+    top: -100px;
   }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+  .contact h1 {
+    font-size: 2.8rem;
+  }
   .contact .mainMenu {
     visibility: collapse;
   }
@@ -1321,6 +1323,18 @@ footer a:hover {
   .contact .contactForm input {
     width: 100%;
   }
+  .contact .contactForm {
+    -webkit-box-shadow: 10px 10px 0 #FDD908;
+            box-shadow: 10px 10px 0 #FDD908;
+    padding: 20px;
+  }
 }
 
 /* Landscape phones and down */
+@media (max-width: 480px) {
+  .contact h1 {
+    font-size: 2rem;
+    position: relative;
+    top: -30px;
+  }
+}

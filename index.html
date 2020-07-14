@@ -11,55 +11,54 @@
 <body class="home">
     <a href="#maincontent" class="skip-link">Skip to main content.</a>
     <header class="clearfix">
-        <!-- <div class="clearfix"> -->
-            <nav class="mainMenu">
-                <ul>
-                    <li><a href=""><span>Home</span></a></li>
-                    <li><a href=""><span>About</span></a></li>
-                    <li><a href=""><span>Blog</span></a></li>
-                    <li><a href=""><span>Contact</span></a></li>
-                </ul>
-            </nav>
-            <label for="toggle" class="hamburger"><i class="fas fa-bars"></i></label>
-            <input type="checkbox" id="toggle" name="toggle">
-            <ul class="hiddenMenu">
-                <li><a href="#"><span>Home</span></a></li>
-                <li><a href="#"><span>About</span></a></li>
-                <li><a href="#"><span>Blog</span></a></li>
-                <li><a href="#"><span>Contact</span></a></li>
+        <!-- I would normally wrap the header in a div.wrapper, but was having issues making it work with the cruise ship header image -->
+        <nav class="mainMenu">
+            <ul>
+                <li><a href="./index.html"><span>Home</span></a></li>
+                <li><a href="#about"><span>About</span></a></li>
+                <li><a href="./blog.html"><span>Blog</span></a></li>
+                <li><a href="./contact.html"><span>Contact</span></a></li>
             </ul>
-            <h1>Boat Ride Adventures</h1>
-            <div class="headerImageContainer">
-                <img src="./assets/home-box-header.png" alt="big white cruise ship sailing into the sea">
-            </div>
-        <!-- </div> -->
+        </nav>
+        <label for="toggle" class="hamburger"><i class="fas fa-bars"></i></label>
+        <input type="checkbox" id="toggle" name="toggle">
+        <ul class="hiddenMenu">
+            <li><a href="./index.html"><span>Home</span></a></li>
+            <li><a href="#about"><span>About</span></a></li>
+            <li><a href="./blog.html"><span>Blog</span></a></li>
+            <li><a href="./contact.html"><span>Contact</span></a></li>
+        </ul>
+        <h1>Boat Ride Adventures</h1>
+        <div class="headerImageContainer">
+            <img src="./assets/home-box-header.png" alt="big white cruise ship sailing into the sea">
+        </div>
     </header>
     <main id="maincontent">
         <section class="siteInfo">
             <div class="wrapper">
                 <div class="siteInfoContainer1">
                     <div class="siteInfoP">
-                        <h2><i class="fas fa-map-marker-alt"></i>New Destinations</h2>
+                        <h2><i class="fas fa-map-marker-alt"></i><span class="fancyUnderline">New Destinations</span></h2>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, aut consectetur voluptatibus at optio corrupti nemo neque molestiae ab, odit illo obcaecati sit, quod mollitia.</p>
                     </div>
                     <div class="siteInfoP">
-                        <h2><i class="fas fa-users"></i>Community</h2>
+                        <h2><i class="fas fa-users"></i><span class="fancyUnderline">Community</span></h2>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, aut consectetur voluptatibus at optio corrupti nemo neque molestiae ab, odit illo obcaecati sit, quod mollitia.</p>
                     </div>
                 </div>
                 <div class="siteInfoContainer2">
                     <div class="siteInfoP">
-                        <h2><i class="fas fa-file"></i>Blog</h2>
+                        <h2><i class="fas fa-file"></i><span class="fancyUnderline">Blog</span></h2>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, aut consectetur voluptatibus at optio corrupti nemo neque molestiae ab, odit illo obcaecati sit, quod mollitia.</p>
                     </div>
                     <div class="siteInfoP">
-                        <h2><i class="fas fa-phone"></i>Get in Touch</h2>
+                        <h2><i class="fas fa-phone"></i><span class="fancyUnderline">Get in Touch</span></h2>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, aut consectetur voluptatibus at optio corrupti nemo neque molestiae ab, odit illo obcaecati sit, quod mollitia.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="moreInfo">
+        <section class="moreInfo" id="about">
             <!-- <div class="wrapper"> -->
                 <div class="moreInfoFlexContainer1">
                     <div class="moreInfoImageContainer1">
@@ -114,6 +113,11 @@
                     <li><img src="./assets/gallery-image-2.jpg" alt="child peeking at you from the playground that again does not match this site"></li>
                     <li><img src="./assets/gallery-image-3.jpg" alt="random children playing tug-of-war; has zero to do with boat adventures"></li>
                 </ul>
+                <div class="galleryArrows">
+                    <i class="fas fa-chevron-left"></i>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                
             </div>
         </section>
     </main>

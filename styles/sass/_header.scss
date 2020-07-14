@@ -1,6 +1,6 @@
-/* GENERAL HEADER STYLES (shared across all three pages */
+/* ***********************Shared Header Styles (across all 3 pages)*********************** */
 
-/* Hidden Hamburger Menu - only applicable at 768px breakpoint*/
+/* Hidden 🍔 Menu - only applicable at 768px breakpoint */
 ul.hiddenMenu {
     background: $colorThree;
 	position: fixed;
@@ -9,21 +9,19 @@ ul.hiddenMenu {
 	left: -50%; 
 	top: 0;
 	height: 100%;
-	transition: all 0.5s; 
-}
-
-ul.hiddenMenu a {
-	display: inline-block;
-    width: 100%;
-    text-decoration: none;
-    font-size: 1.5rem;
-	padding: 20px;
-    color: #FFFFFF;
-}
-
-ul.hiddenMenu a:hover,
-ul.hiddenMenu a:focus {
-    text-decoration: underline;
+    transition: all 0.5s; 
+    a {
+        display: inline-block;
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 20px;
+        color: $colorFour;
+        &:hover,
+        &:focus {
+            color: $colorThree;
+            background-color: $colorTwo;
+        }
+    }
 }
 
 input[type="checkbox"]:checked + ul.hiddenMenu {
@@ -35,7 +33,7 @@ input[type="checkbox"],
     display: none;
 }
 
-label[for="toggle"] {
+.hamburger {
 	position: absolute;
 	top: 20px;
 	right: 20px;
@@ -44,29 +42,34 @@ label[for="toggle"] {
 	z-index: 10;
 }
 
+/* Shared <header> Styles */
+header {
+    background-size: cover;
+    height: 80vh;
+}
 
-/* *************************************HOME PAGE******************************************  */
+/* Shared <nav> Styles */
+nav ul {
+    display: flex;
+    li {
+        font-weight: 700;
+        a {
+            color: $colorFour;
+            padding: 0 30px;
+            & span:hover {
+                border-bottom: $colorTwo 3px solid;
+            }
+        }
+    }
+}
+
+
+/* *************************** Home Page Header Styles ****************************** */
 
 .home header {
     background-image: url(../assets/home-header.jpg);
-    background-size: cover;
-    height: 80vh;
     padding: 40px 0 40px 110px;
     position: relative;
-}
-
-.home nav ul {
-    display: flex;
-        li {
-            font-weight: 700;
-                a {
-                    color: $colorFour;
-                    padding: 0 30px;
-                    & span:hover {
-                        border-bottom: $colorTwo 3px solid;
-                    }
-                }
-        }
 }
 
 .home h1 {
@@ -85,28 +88,12 @@ label[for="toggle"] {
     width: 50%;
 }
 
-/* *************************************BLOG PAGE******************************************  */
+/* *************************** Blog Page Header Styles ****************************** */
 
 .blog header {
     background-image: url(../assets/blog-header.jpg);
-    background-size: cover;
     background-position: 0% 50%;
-    height: 80vh;
     padding: 40px 0 80px 0;
-}
-
-.blog nav ul {
-    display: flex;
-        li {
-            font-weight: 700;
-                a {
-                    color: $colorFour;
-                    padding: 0 30px;
-                    & span:hover {
-                        border-bottom: $colorTwo 3px solid;
-                    }
-                }
-        }
 }
 
 .blog h1 {
@@ -118,27 +105,11 @@ label[for="toggle"] {
 
 .contact header {
     background-image: url(../assets/contact-header.jpg);
-    background-size: cover;
     background-position: 100% 50%;
-    height: 80vh;
     padding: 40px 0 80px 0;
     h1 {
         color: $colorFour;
         text-shadow: 2px 2px 3px black;
         margin-top: 80px;
     }
-}
-
-.contact nav ul {
-    display: flex;
-        li {
-            font-weight: 700;
-                a {
-                    color: $colorFour;
-                    padding: 0 30px;
-                    & span:hover {
-                        border-bottom: $colorTwo 3px solid;
-                    }
-                }
-        }
 }
