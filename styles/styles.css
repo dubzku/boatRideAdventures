@@ -338,6 +338,7 @@ h4 {
 .linkButton:focus {
   -webkit-transform: scale(1.04);
           transform: scale(1.04);
+  cursor: pointer;
 }
 
 textarea {
@@ -820,6 +821,7 @@ nav ul li a span:focus {
 .blog .commentForm button:hover, .blog .commentForm button:focus {
   -webkit-transform: scale(1.04);
           transform: scale(1.04);
+  cursor: pointer;
 }
 
 /* *************************** Contact Page <main> Styles ****************************** */
@@ -899,6 +901,7 @@ nav ul li a span:focus {
 .contact .contactForm button:hover, .contact .contactForm button:focus {
   -webkit-transform: scale(1.04);
           transform: scale(1.04);
+  cursor: pointer;
 }
 
 @-webkit-keyframes pulse {
@@ -972,7 +975,16 @@ footer a:hover, footer a:focus {
   text-decoration: none;
 }
 
-/* ***************HOME PAGE (INDEX.HTML) MEDIA QUERIES*********** */
+/* Global Media Queries */
+@media (max-width: 480px) {
+  body,
+  input,
+  textarea {
+    font-size: 0.8rem;
+  }
+}
+
+/* ******************* 🏠Home Page Media Queries **************** */
 @media (max-width: 1300px) {
   .home header {
     padding-left: 50px;
@@ -989,19 +1001,18 @@ footer a:hover, footer a:focus {
 }
 
 @media (max-width: 940px) {
-  /* Portrait tablet and small desktops */
   .home .headerImageContainer {
     display: none;
   }
   .home .siteInfo {
     padding: 60px 0 150px 0;
   }
-  .home .siteInfoContainer {
+  .home .siteInfo .siteInfoContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 0;
+    margin-top: 0px;
   }
   .home .siteInfoP {
     width: 100%;
@@ -1054,7 +1065,6 @@ footer a:hover, footer a:focus {
 }
 
 @media (max-width: 768px) {
-  /* Landscape phone to portrait tablet */
   .wrapper {
     width: 90%;
   }
@@ -1071,8 +1081,12 @@ footer a:hover, footer a:focus {
   .home h2 {
     text-align: center;
   }
+  .home h3 {
+    font-size: 1.6rem;
+  }
   .home .siteInfoP {
     margin: 40px 0;
+    text-align: center;
   }
   .home .siteInfo i {
     display: none;
@@ -1112,12 +1126,8 @@ footer a:hover, footer a:focus {
 }
 
 @media (max-width: 480px) {
-  /* Landscape phones and down */
   .home header {
-    height: 80vh;
     background-position: center;
-  }
-  .home header {
     padding-left: 25px;
   }
   .home h1 {
@@ -1128,7 +1138,6 @@ footer a:hover, footer a:focus {
   }
   .home .siteInfoP {
     margin: 20px 0;
-    text-align: center;
   }
   .home .aboutTextContainer1,
   .home .aboutTextContainer2 {
@@ -1148,9 +1157,8 @@ footer a:hover, footer a:focus {
   }
 }
 
-/* ***************BLOG PAGE (BLOG.HTML) MEDIA QUERIES*********** */
+/* *********************** 📝Blog Page Media Queries ***************** */
 @media (max-width: 940px) {
-  /* Portrait tablet and small desktops */
   .blog main {
     padding: 50px 0 150px 40px;
   }
@@ -1200,14 +1208,12 @@ footer a:hover, footer a:focus {
 }
 
 @media (max-width: 768px) {
-  /* Landscape phone to portrait tablet */
   .blog h1 {
     font-size: 2.8rem;
   }
   .blog .mediaQueryWrapper {
     margin: 0 auto;
     width: 90%;
-    max-width: 1200px;
   }
   .blog .mainMenu {
     visibility: collapse;
@@ -1266,7 +1272,6 @@ footer a:hover, footer a:focus {
 }
 
 @media (max-width: 480px) {
-  /* Landscape phones and down */
   .blog h1 {
     font-size: 2rem;
   }
@@ -1274,15 +1279,9 @@ footer a:hover, footer a:focus {
     width: 100%;
     padding: 20px 0;
   }
-  .blog .asideTextContainer h4 {
-    text-align: center;
-  }
+  .blog .asideTextContainer h4,
   .blog .asideTextContainer p {
-    font-size: 0.8rem;
     text-align: center;
-  }
-  .blog .asideTextContainer ul li {
-    font-size: 0.8rem;
   }
   .blog article {
     border: none;
@@ -1298,9 +1297,6 @@ footer a:hover, footer a:focus {
     font-size: 1.6rem;
     padding-top: 20px;
     text-align: center;
-  }
-  .blog article .nextDestination p {
-    font-size: 0.8rem;
   }
   .blog .nextDestination p:first-of-type {
     text-align: center;
@@ -1338,8 +1334,7 @@ footer a:hover, footer a:focus {
   }
 }
 
-/* ***************CONTACT PAGE (CONTACT.HTML) MEDIA QUERIES*********** */
-/* Portrait tablet and small desktops */
+/* ********************** 📩 Contact Page Media Queries ****************** */
 @media (max-width: 940px) {
   .contact main .wrapper {
     -webkit-box-orient: vertical;
@@ -1360,7 +1355,6 @@ footer a:hover, footer a:focus {
   }
 }
 
-/* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   .contact h1 {
     font-size: 2.8rem;
@@ -1381,7 +1375,6 @@ footer a:hover, footer a:focus {
   }
 }
 
-/* Landscape phones and down */
 @media (max-width: 480px) {
   .contact h1 {
     font-size: 2rem;

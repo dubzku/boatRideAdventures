@@ -1,6 +1,5 @@
-/* ***************CONTACT PAGE (CONTACT.HTML) MEDIA QUERIES*********** */
+/* ********************** 📩 Contact Page Media Queries ****************** */
 
-/* Portrait tablet and small desktops */
 @media (max-width: 940px) {
     .contact main .wrapper {
         flex-direction: column-reverse;
@@ -14,10 +13,8 @@
         width: 100%;
         top: -100px;
     }
-    
 }
 
-/* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
     .contact h1 {
         font-size: 2.8rem;
@@ -37,7 +34,6 @@
     }
 }
 
-/* Landscape phones and down */
 @media (max-width: 480px) {
     .contact h1 {
         font-size: 2rem;

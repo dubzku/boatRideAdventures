@@ -1,6 +1,6 @@
-/* ***************BLOG PAGE (BLOG.HTML) MEDIA QUERIES*********** */
+/* *********************** 📝Blog Page Media Queries ***************** */
 
-@media (max-width: 940px) {/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
     .blog main {
         padding: 50px 0 150px 40px;
     }
@@ -15,12 +15,12 @@
             width: 80%;
         }
         .asideImageContainer {
-                top: 0px;
-                left: 0px;
-                width: 400px;
-                padding-left: 15px;
-            }
+            top: 0px;
+            left: 0px;
+            width: 400px;
+            padding-left: 15px;
         }
+    }
     .blog article {
         float: none;
         width: 100%;
@@ -43,15 +43,13 @@
     }
 }
 
-
-@media (max-width: 768px) { /* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
     .blog h1 {
         font-size: 2.8rem;
     }
     .blog .mediaQueryWrapper {
         margin: 0 auto;
         width: 90%;
-        max-width: 1200px;
     }
     .blog .mainMenu {
         visibility: collapse;
@@ -107,23 +105,16 @@
     }
 }
 
-
-@media (max-width: 480px) { /* Landscape phones and down */
+@media (max-width: 480px) { 
     .blog h1 {
         font-size: 2rem;
     }
     .blog .asideTextContainer {
         width: 100%;
         padding: 20px 0;
-        h4 {
-            text-align: center;
-        }
+        h4,
         p {
-            font-size: 0.8rem;
             text-align: center;
-        }
-        ul li {
-            font-size: 0.8rem;
         }
     }
     .blog article {
@@ -140,9 +131,6 @@
                 padding-top: 20px;
                 text-align: center;
             }
-            p {
-                font-size: 0.8rem;
-            }
         }
     }
     .blog .nextDestination p:first-of-type {
@@ -155,16 +143,16 @@
     }
     .blog .comment1,
     .blog .comment2 {
-    flex-direction: column;
-    align-items: center;
-    padding: 25px 20px 0px 0px;
-    text-align: center;
-    .comment1ImageContainer,
-    .comment2ImageContainer {
-        img {
-            margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 20px 0px 0px;
+        text-align: center;
+        .comment1ImageContainer,
+        .comment2ImageContainer {
+            img {
+                margin: 0 auto;
+            }
         }
-    }
     }
     .blog section.comments {
         input {
@@ -178,5 +166,4 @@
     .blog .commentForm {
         margin-top: 30px;
     }
-
 }

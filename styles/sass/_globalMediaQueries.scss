@@ -1,0 +1,9 @@
+/* Global Media Queries */
+
+@media (max-width: 480px) {
+    body,
+    input,
+    textarea {
+        font-size: 0.8rem;
+    }
+}

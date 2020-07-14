@@ -1,4 +1,4 @@
-/* ***************HOME PAGE (INDEX.HTML) MEDIA QUERIES*********** */
+/* ******************* 🏠Home Page Media Queries **************** */
 
 @media (max-width: 1300px) {
     .home header {
@@ -13,20 +13,19 @@
     .home h2 {
         font-size: 1.5rem;
     }
-
 }
 
-@media (max-width: 940px) {  /* Portrait tablet and small desktops */
+@media (max-width: 940px) {
     .home .headerImageContainer {
         display: none;
     }
     .home .siteInfo {
         padding: 60px 0 150px 0;
     }
-    .home .siteInfoContainer {
+    .home .siteInfo .siteInfoContainer {
         flex-direction: column;
-        margin-top: 0;
-        }
+        margin-top: 0px;
+    }
     .home .siteInfoP {
         width: 100%;
         margin: 40px;
@@ -42,7 +41,7 @@
     .home .aboutTextContainer1,
     .home .aboutTextContainer2,
     .home .aboutImageContainer2 {
-    width: 100%;
+        width: 100%;
     }
     .home .aboutTextContainer1 {
         padding: 0 20px 0 50px;
@@ -71,8 +70,7 @@
     }
 }
 
-
-@media (max-width: 768px) {  /* Landscape phone to portrait tablet */
+@media (max-width: 768px) {  
     .wrapper {
         width: 90%;
     }
@@ -89,8 +87,12 @@
     .home h2 {
         text-align: center;
     }
+    .home h3 {
+        font-size: 1.6rem;
+    }
     .home .siteInfoP {
         margin: 40px 0;
+        text-align: center;
     }
     .home .siteInfo i {
         display: none;
@@ -124,13 +126,9 @@
     }
 }
 
-
-@media (max-width: 480px) { /* Landscape phones and down */
+@media (max-width: 480px) { 
     .home header {
-        height: 80vh;
         background-position: center;
-    }
-    .home header {
         padding-left: 25px;
     }
     .home h1 {
@@ -141,7 +139,6 @@
     }
     .home .siteInfoP {
         margin: 20px 0;
-        text-align: center;
     }
     .home .aboutTextContainer1,
     .home .aboutTextContainer2 {
