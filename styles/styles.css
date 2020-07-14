@@ -1334,7 +1334,7 @@ footer a:hover, footer a:focus {
   }
 }
 
-/* ********************** 📩 Contact Page Media Queries ****************** */
+/* ********************** 📩 Contact Page Media Queries ******************* */
 @media (max-width: 940px) {
   .contact main .wrapper {
     -webkit-box-orient: vertical;
