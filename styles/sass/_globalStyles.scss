@@ -14,8 +14,16 @@
 
 /* ---------------GLOBAL STYLES--------------- */
 
+html, body {
+    overflow-x: hidden;
+}
+
 html {
     font-size: 125%; /*20px*/
+}
+
+body {
+    position: relative
 }
 
 .wrapper {
